@@ -13,12 +13,15 @@
             color: #333;
         }
 
-        /* Header styles */
+        /* Header */
         header {
             background-color: #0d6efd;
             color: white;
             padding: 20px;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         header img.logo {
@@ -38,17 +41,18 @@
             font-size: 1em;
         }
 
-        /* Navigation menu */
+        /* Navigation Menu */
         nav {
             background-color: #084298;
-            padding: 10px 0;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 8px 15px;
             font-weight: bold;
         }
 
@@ -56,6 +60,7 @@
             text-decoration: underline;
         }
 
+        /* Main content */
         main {
             max-width: 900px;
             margin: 30px auto;
@@ -139,6 +144,18 @@
         a:hover {
             text-decoration: underline;
         }
+
+        /* Responsive mobile nav spacing */
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                margin: 6px 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -155,7 +172,7 @@
     <a href="https://safehearts.it.com/whatsclean/">WhatsClean App</a>
     <a href="/blog/">Blog</a>
     <a href="/privacy.html">Privacy Policy</a>
-    <a href="#contact">Contact</a>
+    <a href="#contact-info">Contact</a>
 </nav>
 
 <main>
@@ -201,15 +218,15 @@
         </ul>
     </section>
 
-    <section id="contact">
+    <section id="team">
         <h2>Team / Board Members</h2>
         <div class="team-member"><strong>Zia Ullah</strong> – Founder & CEO</div>
     </section>
 
     <section id="contact-info">
         <h2>Contact Us</h2>
-        <p>Email: <a href="mailto:info@safehearts.it.com">info@safehearts.it.com</a></p>
-        <p>Website: <a href="https://safehearts.it.com" target="_blank">https://safehearts.it.com</a></p>
+        <p>Email: <a href="mailto:safehearts.apps@gmail.com">safehearts.apps@gmail.com</a></p>
+        <p>Website: <a href="https://safehearts.it.com" target="_blank">safehearts.it.com</a></p>
         <p>Privacy Policy: <a href="/privacy.html">View Privacy Policy</a></p>
     </section>
 </main>
