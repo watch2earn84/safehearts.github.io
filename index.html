@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,25 +23,15 @@ header {
     background: linear-gradient(135deg, #004aad, #00a3ff);
     color: white;
     text-align: center;
-    padding: 50px 20px;
+    padding: 60px 20px;
 }
 
-/* LOGO */
-.logo {
-    width: 90px;
-    margin-bottom: 10px;
-}
-
-header h1 { 
-    font-size: 2.4rem; 
-    font-weight: 600;
-}
+header h1 { font-size: 2.4rem; font-weight: 600; }
 
 header p { 
     font-size: 1.05rem; 
     max-width: 600px;
     margin: 10px auto 0;
-    opacity: 0.95;
 }
 
 /* NAV */
@@ -57,16 +46,12 @@ nav {
     color: white;
     padding: 12px 18px;
     text-decoration: none;
-    font-weight: 500;
     display: flex;
     align-items: center;
     gap: 6px;
-    transition: 0.3s;
 }
 
-.nav-link:hover {
-    background: rgba(255,255,255,0.15);
-}
+.nav-link:hover { background: rgba(255,255,255,0.15); }
 
 /* SECTION */
 section {
@@ -79,7 +64,6 @@ h2 {
     color: #004aad;
     text-align: center;
     margin-bottom: 30px;
-    font-size: 1.8rem;
 }
 
 /* Vision & Mission */
@@ -90,6 +74,46 @@ h2 {
     text-align: center;
 }
 
+/* CORE VALUES */
+.core-values {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.value-card {
+    background: #fff;
+    max-width: 250px;
+    padding: 22px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+.value-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 30px rgba(0,0,0,0.15);
+}
+
+.value-icon {
+    font-size: 40px;
+    color: #004aad;
+    margin-bottom: 10px;
+}
+
+.value-card h3 {
+    color: #004aad;
+    margin-bottom: 8px;
+    font-size: 1.05rem;
+}
+
+.value-card p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
 /* TEAM */
 .team {
     display: flex;
@@ -98,7 +122,6 @@ h2 {
     justify-content: center;
 }
 
-/* CEO Highlight */
 .member.featured {
     max-width: 260px;
     transform: scale(1.08);
@@ -106,7 +129,6 @@ h2 {
     border: 2px solid #004aad;
 }
 
-/* Normal Cards */
 .member {
     background: #fff;
     max-width: 220px;
@@ -119,10 +141,8 @@ h2 {
 
 .member:hover {
     transform: translateY(-6px);
-    box-shadow: 0 16px 30px rgba(0,0,0,0.18);
 }
 
-/* Avatar */
 .team-avatar {
     width: 75px;
     height: 75px;
@@ -134,19 +154,6 @@ h2 {
     justify-content: center;
     margin: 0 auto 14px;
     font-size: 26px;
-    font-weight: 600;
-}
-
-/* Text */
-.member h4 {
-    color: #004aad;
-    margin-bottom: 6px;
-    font-size: 1.05rem;
-}
-
-.member p {
-    font-size: 0.9rem;
-    color: #555;
 }
 
 /* CONTACT */
@@ -155,7 +162,6 @@ h2 {
     background: #eef5ff;
     padding: 20px;
     border-left: 5px solid #004aad;
-    border-radius: 8px;
 }
 
 /* FOOTER */
@@ -164,12 +170,6 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
-    margin-top: 60px;
-}
-
-/* MOBILE */
-@media (max-width: 600px) {
-    nav { flex-direction: column; }
 }
 </style>
 </head>
@@ -177,7 +177,6 @@ footer {
 <body>
 
 <header>
-    <img src="logo.png" class="logo" alt="SafeHearts Logo">
     <h1>SafeHearts</h1>
     <p>We build privacy-first apps that protect users, strengthen connections, and solve real-world problems.</p>
 </header>
@@ -200,6 +199,44 @@ footer {
     <p>“To deliver high-end, affordable applications worldwide without compromising quality,
         doing more with less while advancing sustainability and making a positive impact on
         society—placing customers at the heart of everything we do.”</p>
+</section>
+
+<!-- CORE VALUES -->
+<section>
+    <h2>Our Core Values</h2>
+    <div class="core-values">
+
+        <div class="value-card">
+            <i class="material-icons value-icon">security</i>
+            <h3>Privacy & Security</h3>
+            <p>Protecting user data with the highest standards.</p>
+        </div>
+
+        <div class="value-card">
+            <i class="material-icons value-icon">verified_user</i>
+            <h3>Integrity</h3>
+            <p>Honest and transparent in all dealings.</p>
+        </div>
+
+        <div class="value-card">
+            <i class="material-icons value-icon">lightbulb</i>
+            <h3>Innovation</h3>
+            <p>Creating smart solutions for real-world problems.</p>
+        </div>
+
+        <div class="value-card">
+            <i class="material-icons value-icon">people</i>
+            <h3>Customer Focus</h3>
+            <p>Users are at the center of everything we do.</p>
+        </div>
+
+        <div class="value-card">
+            <i class="material-icons value-icon">eco</i>
+            <h3>Responsibility</h3>
+            <p>Building technology that benefits society.</p>
+        </div>
+
+    </div>
 </section>
 
 <section id="team-section">
@@ -228,13 +265,11 @@ footer {
         <div class="member">
             <div class="team-avatar">S</div>
             <h4>Saad Ullah</h4>
-            
         </div>
 
         <div class="member">
             <div class="team-avatar">M</div>
             <h4>Maaz Azam</h4>
-            
         </div>
 
     </div>
