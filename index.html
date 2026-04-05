@@ -1,235 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SafeHearts – Care, Connect, Protect</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeHearts – Care, Connect, Protect</title>
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            scroll-behavior: smooth;
+        }
 
-<style>
-body {
-    font-family: 'Segoe UI', sans-serif;
-    margin: 0;
-    background: #f4f7fb;
-    color: #333;
-}
+        /* Header with gradient */
+        header {
+            background: linear-gradient(135deg, #004aad, #00a3ff);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2rem;
+        }
 
-/* HEADER */
-header {
-    background: linear-gradient(135deg, #0d6efd, #0a58ca);
-    color: white;
-    text-align: center;
-    padding: 35px 20px;
-}
+        /* Section Styling */
+        section {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-out;
+        }
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        h2 {
+            color: #004aad;
+            margin-bottom: 25px;
+            text-align: center;
+            font-size: 2rem;
+        }
 
-.logo {
-    width: 90px;
-    margin-bottom: 10px;
-}
+        .mission, .vision {
+            background-color: #e6f0ff;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+        }
 
-/* NAVBAR */
-nav {
-    background: #0a58ca;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
+        /* Core Values */
+        .core-values {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+        }
+        .value-card {
+            background-color: #ffffff;
+            flex: 1 1 250px;
+            max-width: 280px;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .value-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+        }
+        .value-card i.material-icons {
+            font-size: 45px;
+            color: #004aad;
+            margin-bottom: 12px;
+        }
+        .value-card h3 {
+            margin: 12px 0 8px 0;
+            color: #004aad;
+        }
+        .value-card p {
+            font-size: 0.95rem;
+            color: #555;
+        }
 
-nav a {
-    color: white;
-    padding: 10px 16px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-}
+        /* Team Members */
+        .team {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .member {
+            background-color: #ffffff;
+            flex: 1 1 200px;
+            max-width: 220px;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.4s, box-shadow 0.4s;
+        }
+        .member img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+        .member h4 {
+            margin: 10px 0 5px 0;
+            color: #004aad;
+        }
+        .member p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #555;
+        }
+        .member:hover {
+            transform: scale(1.08);
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25);
+        }
 
-nav a:hover {
-    background: rgba(255,255,255,0.15);
-}
-
-/* MAIN */
-main {
-    max-width: 1000px;
-    margin: auto;
-    padding: 15px;
-}
-
-section {
-    background: white;
-    margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-}
-
-h2 {
-    color: #0d6efd;
-    margin-top: 0;
-}
-
-/* MISSION */
-.mission {
-    background: linear-gradient(135deg, #eef5ff, #f8fbff);
-    border-left: 5px solid #0d6efd;
-    font-style: italic;
-}
-
-/* TEAM GRID */
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 12px;
-    margin-top: 15px;
-}
-
-/* TEAM CARD */
-.team-card {
-    background: #fff;
-    border-radius: 8px;
-    text-align: center;
-    padding: 15px;
-    transition: 0.25s;
-    border: 1px solid #eee;
-}
-
-.team-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 5px 14px rgba(0,0,0,0.1);
-}
-
-/* SQUARE AVATAR */
-.team-avatar {
-    width: 60px;
-    height: 60px;
-    border-radius: 8px;
-    background: #0d6efd;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    margin: 0 auto 10px;
-}
-
-.team-card h3 {
-    margin: 8px 0 5px;
-    font-size: 16px;
-}
-
-.role {
-    color: #666;
-    font-size: 13px;
-}
-
-/* CONTACT */
-.cta {
-    text-align: center;
-    background: #eef5ff;
-    padding: 18px;
-    border-left: 5px solid #0d6efd;
-    border-radius: 8px;
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    background: #222;
-    color: white;
-    padding: 12px;
-    font-size: 14px;
-}
-
-/* MOBILE */
-@media (max-width: 600px) {
-    nav {
-        flex-direction: column;
-    }
-}
-</style>
-
+        /* Footer */
+        footer {
+            background-color: #004aad;
+            color: white;
+            padding: 25px;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
 </head>
-
 <body>
 
 <header>
-    <img src="logo.png" class="logo" alt="logo">
     <h1>SafeHearts</h1>
-    <p>Care – Connect – Protect</p>
+    <p>Care, Connect, Protect – Building secure and socially beneficial digital platforms</p>
 </header>
 
-<nav>
-    <a href="/">Home</a>
-    <a href="https://safehearts.it.com/whatsclean/">WhatsClean App</a>
-    <a href="/blog/">Blog</a>
-    <a href="/privacy.html">Privacy Policy</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<main>
-
-<section>
-    <h2>About Us</h2>
-
-    <div style="background:#eef1f5;padding:12px;border-radius:6px;margin-top:12px;">
-        <p><strong>Company Registration Number:</strong> 0321702</p>
-        <p><strong>Taxpayer Registration Number:</strong> I329749</p>
-    </div>
+<section class="vision">
+    <h2>Our Vision</h2>
+    <p>To become the most trusted choice for digital solutions by delivering innovative, secure, and socially beneficial platforms worldwide.</p>
 </section>
 
 <section class="mission">
     <h2>Our Mission</h2>
-    <p>
-        “To deliver high-end, affordable applications worldwide without compromising quality,
-        doing more with less while advancing sustainability and making a positive impact on
-        society—placing customers at the heart of everything we do.”
-    </p>
+    <p>To provide high-quality, affordable, and privacy-friendly digital platforms that prioritize customer safety, promote sustainability, and create positive societal impact.</p>
 </section>
 
-<section id="team">
-    <h2>Team / Board Members</h2>
-
-    <div class="team-grid">
-
-        <div class="team-card">
-            <div class="team-avatar">Z</div>
-            <h3>Zia Ullah</h3>
-            <p class="role">Founder & CEO</p>
-        </div>
-
-        <div class="team-card">
-            <div class="team-avatar">R</div>
-            <h3>Muhammad Rizwan Shah</h3>
-            <p class="role">Advocate High Court (Legal Advisor)</p>
-        </div>
-
-        <div class="team-card">
-            <div class="team-avatar">A</div>
-            <h3>Allah Bakhsh</h3>
-            <p class="role">Head of Development</p>
-        </div>
-
-        <div class="team-card">
-            <div class="team-avatar">S</div>
-            <h3>Saad Ullah</h3>
-            <p class="role">AI & Blockchain Specialist</p>
-        </div>
-
+<section class="core-values">
+    <h2>Our Core Values</h2>
+    <div class="value-card">
+        <i class="material-icons">security</i>
+        <h3>Customer Privacy & Security</h3>
+        <p>Utmost care in protecting customer data and privacy.</p>
+    </div>
+    <div class="value-card">
+        <i class="material-icons">verified_user</i>
+        <h3>Integrity & Transparency</h3>
+        <p>Ethical behavior and openness in all dealings.</p>
+    </div>
+    <div class="value-card">
+        <i class="material-icons">lightbulb</i>
+        <h3>Innovation & Excellence</h3>
+        <p>Commitment to creative, high-quality solutions.</p>
+    </div>
+    <div class="value-card">
+        <i class="material-icons">people</i>
+        <h3>Customer-Centricity</h3>
+        <p>Prioritizing customers’ needs and expectations.</p>
+    </div>
+    <div class="value-card">
+        <i class="material-icons">eco</i>
+        <h3>Social Responsibility</h3>
+        <p>Technology that benefits society and promotes sustainability.</p>
+    </div>
+    <div class="value-card">
+        <i class="material-icons">group</i>
+        <h3>Collaboration & Respect</h3>
+        <p>Teamwork, diversity, and mutual respect in the workplace.</p>
     </div>
 </section>
 
-<section id="contact">
-    <h2>Contact Us</h2>
-
-    <div class="cta">
-        <p>Email: safehearts.apps@gmail.com</p>
-        <p>Website: safehearts.it.com</p>
+<section class="team">
+    <h2>Our Team</h2>
+    <div class="member">
+        <img src="allah_bakhsh.jpg" alt="Allah Bakhsh">
+        <h4>Allah Bakhsh</h4>
+        <p>Head of Development</p>
+    </div>
+    <div class="member">
+        <img src="saad_ullah.jpg" alt="Saad Ullah">
+        <h4>Saad Ullah</h4>
+        <p>AI and Blockchain Specialist</p>
     </div>
 </section>
-
-</main>
 
 <footer>
-    <p>© 2026 SafeHearts Private Limited – All Rights Reserved</p>
+    &copy; 2026 SafeHearts. All rights reserved.
 </footer>
+
+<script>
+    // Scroll animation for sections
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => observer.observe(section));
+</script>
 
 </body>
 </html>
