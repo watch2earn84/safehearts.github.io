@@ -4,20 +4,45 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SafeHearts – Care, Connect, Protect</title>
+
+<!-- Modern Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Segoe UI', sans-serif; background: #f4f7fb; color: #333; scroll-behavior: smooth; }
+
+body { 
+    font-family: 'Inter', sans-serif;
+    background: #f4f7fb;
+    color: #333;
+    scroll-behavior: smooth;
+    line-height: 1.6;
+}
 
 /* HEADER */
 header {
     background: linear-gradient(135deg, #004aad, #00a3ff);
     color: white;
     text-align: center;
-    padding: 60px 20px;
+    padding: 50px 20px;
 }
-header h1 { font-size: 3rem; margin-bottom: 10px; }
-header p { font-size: 1.2rem; }
+
+header h1 { 
+    font-size: 2.2rem; 
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+header p { 
+    font-size: 1rem; 
+    font-weight: 400;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.95;
+}
 
 /* NAVBAR */
 nav {
@@ -26,21 +51,23 @@ nav {
     justify-content: center;
     flex-wrap: wrap;
 }
+
 .nav-link {
     color: white;
     padding: 12px 18px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
     display: flex;
     align-items: center;
     gap: 6px;
     position: relative;
-    transition: background 0.3s, transform 0.3s;
+    transition: 0.3s;
 }
+
 .nav-link:hover {
     background: rgba(255,255,255,0.15);
-    transform: translateY(-2px);
 }
+
 .nav-link.active::after {
     content: '';
     position: absolute;
@@ -49,7 +76,6 @@ nav {
     width: 80%;
     height: 3px;
     background: #00a3ff;
-    border-radius: 2px;
 }
 
 /* SECTION */
@@ -58,80 +84,153 @@ section {
     margin: 60px auto;
     padding: 0 20px;
     opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.8s ease-out;
+    transform: translateY(40px);
+    transition: 0.7s ease;
 }
-section.visible { opacity: 1; transform: translateY(0); }
-h2 { color: #004aad; margin-bottom: 25px; text-align: center; font-size: 2rem; }
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h2 {
+    color: #004aad;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
 
 /* Vision & Mission */
-.vision, .mission { background: #e6f0ff; padding: 30px; border-radius: 12px; text-align: center; }
+.vision, .mission {
+    background: #e6f0ff;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 0.98rem;
+}
 
 /* Core Values */
-.core-values { display: flex; flex-wrap: wrap; gap: 25px; justify-content: center; }
+.core-values {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
 .value-card {
     background: #fff;
     flex: 1 1 250px;
-    max-width: 280px;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    max-width: 260px;
+    padding: 22px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: 0.3s;
 }
-.value-card:hover { transform: translateY(-7px); box-shadow: 0 12px 24px rgba(0,0,0,0.2); }
-.value-card i.material-icons { font-size: 45px; color: #004aad; margin-bottom: 12px; }
-.value-card h3 { margin: 12px 0 8px 0; color: #004aad; }
-.value-card p { font-size: 0.95rem; color: #555; }
 
-/* Team */
-.team { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 30px; }
+.value-card:hover {
+    transform: translateY(-5px);
+}
+
+.value-card i {
+    font-size: 38px;
+    color: #004aad;
+    margin-bottom: 10px;
+}
+
+.value-card h3 {
+    margin: 10px 0;
+    font-size: 1.05rem;
+    color: #004aad;
+    font-weight: 600;
+}
+
+.value-card p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* TEAM */
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
 .member {
     background: #fff;
     flex: 1 1 200px;
     max-width: 220px;
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     text-align: center;
-    transition: transform 0.4s, box-shadow 0.4s;
+    transition: 0.3s;
 }
-/* Uniform circular avatars */
+
+.member:hover {
+    transform: scale(1.05);
+}
+
 .team-avatar {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     background: #004aad;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 28px;
-    margin: 0 auto 15px;
+    font-size: 26px;
+    margin: 0 auto 12px;
 }
-.member:hover { transform: scale(1.08); box-shadow: 0 14px 28px rgba(0,0,0,0.25); }
-.member:hover .team-avatar { transform: scale(1.1); transition: 0.3s; }
-.member h4 { margin: 10px 0 5px 0; color: #004aad; }
-.member p { margin: 0; font-size: 0.95rem; color: #555; }
 
-/* Contact / CTA */
-.cta { text-align: center; background: #eef5ff; padding: 20px; border-left: 5px solid #004aad; border-radius: 8px; }
+.member h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #004aad;
+}
 
-/* Footer */
-footer { background: #222; color: white; text-align: center; padding: 25px; margin-top: 50px; }
+.member p {
+    font-size: 0.9rem;
+    color: #555;
+}
 
-/* Mobile */
-@media (max-width: 600px) { 
+/* CONTACT */
+.cta {
+    text-align: center;
+    background: #eef5ff;
+    padding: 18px;
+    border-left: 4px solid #004aad;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+/* FOOTER */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
     nav { flex-direction: column; }
     .nav-link { justify-content: center; }
 }
 </style>
 </head>
+
 <body>
 
 <header>
     <h1>SafeHearts</h1>
-    <p>.“We build privacy-first apps that protect users, strengthen connections, and solve real-world problems.”</p>
+    <p>We build privacy-first apps that protect users, strengthen connections, and solve real-world problems.</p>
 </header>
 
 <nav>
@@ -144,51 +243,55 @@ footer { background: #222; color: white; text-align: center; padding: 25px; marg
 
 <section class="vision">
     <h2>Our Vision</h2>
-    <p>To become the most trusted choice for digital solutions by delivering innovative, secure, and socially beneficial platforms worldwide.</p>
+    <p>To be the leading and most trusted provider, becoming customers’ first choice through innovation, quality, and exceptional service.</p>
 </section>
 
 <section class="mission">
     <h2>Our Mission</h2>
-    <p>“To deliver high-end, affordable applications worldwide without compromising quality,
-        doing more with less while advancing sustainability and making a positive impact on
-        society—placing customers at the heart of everything we do.” </p>
+    <p>To deliver high-end, affordable applications worldwide without compromising quality, doing more with less while advancing sustainability and making a positive impact on society—placing customers at the heart of everything we do.</p>
 </section>
 
 <section class="core-values">
     <h2>Our Core Values</h2>
+
     <div class="value-card">
         <i class="material-icons">security</i>
-        <h3>Customer Privacy & Security</h3>
-        <p>Utmost care in protecting customer data and privacy.</p>
+        <h3>Privacy & Security</h3>
+        <p>Protecting user data with the highest standards.</p>
     </div>
+
     <div class="value-card">
         <i class="material-icons">verified_user</i>
-        <h3>Integrity & Transparency</h3>
-        <p>Ethical behavior and openness in all dealings.</p>
+        <h3>Integrity</h3>
+        <p>Honest, transparent, and ethical in everything.</p>
     </div>
+
     <div class="value-card">
         <i class="material-icons">lightbulb</i>
-        <h3>Innovation & Excellence</h3>
-        <p>Commitment to creative, high-quality solutions.</p>
+        <h3>Innovation</h3>
+        <p>Building smarter solutions for real problems.</p>
     </div>
+
     <div class="value-card">
         <i class="material-icons">people</i>
-        <h3>Customer-Centricity</h3>
-        <p>Prioritizing customers’ needs and expectations.</p>
+        <h3>Customer Focus</h3>
+        <p>Users are at the center of every decision.</p>
     </div>
+
     <div class="value-card">
         <i class="material-icons">eco</i>
-        <h3>Social Responsibility</h3>
-        <p>Technology that benefits society and promotes sustainability.</p>
+        <h3>Responsibility</h3>
+        <p>Technology that benefits society.</p>
     </div>
+
     <div class="value-card">
         <i class="material-icons">group</i>
-        <h3>Collaboration & Respect</h3>
-        <p>Teamwork, diversity, and mutual respect in the workplace.</p>
+        <h3>Collaboration</h3>
+        <p>Stronger results through teamwork.</p>
     </div>
 </section>
 
-<section class="team" id="team">
+<section class="team">
     <h2>Our Team</h2>
 
     <div class="member">
@@ -200,7 +303,7 @@ footer { background: #222; color: white; text-align: center; padding: 25px; marg
     <div class="member">
         <div class="team-avatar">R</div>
         <h4>Muhammad Rizwan Shah</h4>
-        <p>Advocate High Court (Legal Advisor)</p>
+        <p>Legal Advisor</p>
     </div>
 
     <div class="member">
@@ -229,11 +332,16 @@ footer { background: #222; color: white; text-align: center; padding: 25px; marg
 </footer>
 
 <script>
-// Scroll animation for sections
 const sections = document.querySelectorAll('section');
+
 const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add('visible'); } });
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+        }
+    });
 }, { threshold: 0.2 });
+
 sections.forEach(section => observer.observe(section));
 </script>
 
