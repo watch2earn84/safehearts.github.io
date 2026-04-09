@@ -1,263 +1,293 @@
-<!DOCTYPE html>  <html lang="en">  
-<head>  
-<meta charset="UTF-8">  
-<meta name="viewport" content="width=device-width, initial-scale=1.0">  
-<title>SafeHearts – Care, Connect, Protect</title>  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">  
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">  <style>  
-* { margin: 0; padding: 0; box-sizing: border-box; }  
-  
-body {   
-    font-family: 'Inter', sans-serif;  
-    background: #f4f7fb;  
-    color: #333;  
-    line-height: 1.6;  
-}  
-  
-/* HEADER */  
-header {  
-    background: linear-gradient(135deg, #004aad, #00a3ff);  
-    color: white;  
-    text-align: center;  
-    padding: 60px 20px;  
-}  
-  
-header h1 { font-size: 2.4rem; font-weight: 600; }  
-  
-header p {   
-    font-size: 1.05rem;   
-    max-width: 600px;  
-    margin: 10px auto 0;  
-}  
-  
-/* NAV */  
-nav {  
-    background: #004aad;  
-    display: flex;  
-    justify-content: center;  
-    flex-wrap: wrap;  
-}  
-  
-.nav-link {  
-    color: white;  
-    padding: 12px 18px;  
-    text-decoration: none;  
-    display: flex;  
-    align-items: center;  
-    gap: 6px;  
-}  
-  
-.nav-link:hover { background: rgba(255,255,255,0.15); }  
-  
-/* SECTION */  
-section {  
-    max-width: 1100px;  
-    margin: 70px auto;  
-    padding: 0 20px;  
-}  
-  
-h2 {  
-    color: #004aad;  
-    text-align: center;  
-    margin-bottom: 30px;  
-}  
-  
-/* Vision & Mission */  
-.vision, .mission {  
-    background: #e6f0ff;  
-    padding: 30px;  
-    border-radius: 12px;  
-    text-align: center;  
-}  
-  
-/* CORE VALUES */  
-.core-values {  
-    display: flex;  
-    flex-wrap: wrap;  
-    gap: 25px;  
-    justify-content: center;  
-}  
-  
-.value-card {  
-    background: #fff;  
-    max-width: 250px;  
-    padding: 22px;  
-    border-radius: 12px;  
-    text-align: center;  
-    transition: 0.3s;  
-    box-shadow: 0 6px 14px rgba(0,0,0,0.08);  
-}  
-  
-.value-card:hover {  
-    transform: translateY(-6px);  
-    box-shadow: 0 16px 30px rgba(0,0,0,0.15);  
-}  
-  
-.value-icon {  
-    font-size: 40px;  
-    color: #004aad;  
-    margin-bottom: 10px;  
-}  
-  
-.value-card h3 {  
-    color: #004aad;  
-    margin-bottom: 8px;  
-    font-size: 1.05rem;  
-}  
-  
-.value-card p {  
-    font-size: 0.9rem;  
-    color: #555;  
-}  
-  
-/* TEAM */  
-.team {  
-    display: flex;  
-    flex-wrap: wrap;  
-    gap: 25px;  
-    justify-content: center;  
-}  
-  
-.member.featured {  
-    max-width: 260px;  
-    transform: scale(1.08);  
-    box-shadow: 0 12px 30px rgba(0,0,0,0.15);  
-    border: 2px solid #004aad;  
-}  
-  
-.member {  
-    background: #fff;  
-    max-width: 220px;  
-    padding: 20px;  
-    border-radius: 12px;  
-    text-align: center;  
-    transition: 0.35s;  
-    box-shadow: 0 6px 14px rgba(0,0,0,0.08);  
-}  
-  
-.member:hover {  
-    transform: translateY(-6px);  
-}  
-  
-.team-avatar {  
-    width: 75px;  
-    height: 75px;  
-    border-radius: 50%;  
-    background: linear-gradient(135deg, #004aad, #00a3ff);  
-    color: white;  
-    display: flex;  
-    align-items: center;  
-    justify-content: center;  
-    margin: 0 auto 14px;  
-    font-size: 26px;  
-}  
-  
-/* CONTACT */  
-.cta {  
-    text-align: center;  
-    background: #eef5ff;  
-    padding: 20px;  
-    border-left: 5px solid #004aad;  
-}  
-  
-/* FOOTER */  
-footer {  
-    background: #222;  
-    color: white;  
-    text-align: center;  
-    padding: 20px;  
-}  
-</style>  </head>  <body>  <header>  
-    <img src="logo.png" alt="SafeHearts Logo" style="height:60px; margin-bottom:15px;">  
-    <h1>SafeHearts</h1>  
-    <p>We build privacy-first apps that protect users, strengthen connections, and solve real-world problems.</p>  
-</header>  <nav>  
-    <a href="/" class="nav-link"><i class="material-icons">home</i> Home</a>  
-    <a href="https://safehearts.it.com/whatsclean/" class="nav-link"><i class="material-icons">apps</i> WhatsClean App</a>  
-    <a href="/blog/" class="nav-link"><i class="material-icons">article</i> Blog</a>  
-    <a href="/privacy.html" class="nav-link"><i class="material-icons">policy</i> Privacy Policy</a>  
-    <a href="#contact" class="nav-link"><i class="material-icons">contact_mail</i> Contact</a>  
-</nav>  <section class="vision">  
-    <h2>Our Vision</h2>  
-    <p>To be the leading and most trusted provider, becoming customers’ first choice through innovation, quality, and exceptional service.</p>  
-</section>  <section class="mission">  
-    <h2>Our Mission</h2>  
-    <p>“To deliver high-end, affordable applications worldwide without compromising quality,  
-        doing more with less while advancing sustainability and making a positive impact on  
-        society—placing customers at the heart of everything we do.”</p>  
-</section>  <!-- CORE VALUES -->  <section>  
-    <h2>Our Core Values</h2>  
-    <div class="core-values">  <div class="value-card">  
-        <i class="material-icons value-icon">security</i>  
-        <h3>Privacy & Security</h3>  
-        <p>Protecting user data with the highest standards.</p>  
-    </div>  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SafeHearts – Care, Connect, Protect</title>
 
-    <div class="value-card">  
-        <i class="material-icons value-icon">verified_user</i>  
-        <h3>Integrity</h3>  
-        <p>Honest and transparent in all dealings.</p>  
-    </div>  
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <div class="value-card">  
-        <i class="material-icons value-icon">lightbulb</i>  
-        <h3>Innovation</h3>  
-        <p>Creating smart solutions for real-world problems.</p>  
-    </div>  
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-    <div class="value-card">  
-        <i class="material-icons value-icon">people</i>  
-        <h3>Customer Focus</h3>  
-        <p>Users are at the center of everything we do.</p>  
-    </div>  
+body { 
+    font-family: 'Inter', sans-serif;
+    background: #f4f7fb;
+    color: #333;
+    line-height: 1.6;
+}
 
-    <div class="value-card">  
-        <i class="material-icons value-icon">eco</i>  
-        <h3>Responsibility</h3>  
-        <p>Building technology that benefits society.</p>  
-    </div>  
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #004aad, #00a3ff);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
 
-</div>
+header h1 { font-size: 2.4rem; font-weight: 600; }
 
-</section>  <section id="team-section">  
-    <h2>Our Team</h2>  <div class="team">  
+header p { 
+    font-size: 1.05rem; 
+    max-width: 600px;
+    margin: 10px auto 0;
+}
 
-    <div class="member featured">  
-        <img src="myphoto.jpg" alt="Zia Ullah" class="team-avatar">  
-        <h4>Zia Ullah</h4>  
-        <p>Founder & CEO</p>  
-    </div>  
+/* NAV */
+nav {
+    background: #004aad;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
-    <div class="member">  
-        <div class="team-avatar">R</div>  
-        <h4>Muhammad Rizwan Shah</h4>  
-        <p>Legal Advisor</p>  
-    </div>  
+.nav-link {
+    color: white;
+    padding: 12px 18px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
 
-    <div class="member">  
-        <div class="team-avatar">A</div>  
-        <h4>Allah Bakhsh</h4>  
-        <p>Software Engineer</p>  
-    </div>  
+.nav-link:hover { background: rgba(255,255,255,0.15); }
 
-    <div class="member">  
-        <div class="team-avatar">S</div>  
-        <h4>Saad Ullah</h4>  
-    </div>  
+/* SECTION */
+section {
+    max-width: 1100px;
+    margin: 70px auto;
+    padding: 0 20px;
+}
 
-    <div class="member">  
-        <div class="team-avatar">M</div>  
-        <h4>Maaz Azam</h4>  
-    </div>  
+h2 {
+    color: #004aad;
+    text-align: center;
+    margin-bottom: 30px;
+}
 
-</div>
+/* Vision & Mission */
+.vision, .mission {
+    background: #e6f0ff;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+}
 
-</section>  <section id="contact">  
-    <h2>Contact Us</h2>  
-    <div class="cta">  
-        <p>Email: safehearts.apps@gmail.com</p>  
-        <p>Website: safehearts.it.com</p>  
-    </div>  
-</section>  <footer>  
-    <p>© 2026 SafeHearts Private Limited – All Rights Reserved</p>  
-</footer>  </body>  
-</html>  
+/* CORE VALUES */
+.core-values {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.value-card {
+    background: #fff;
+    max-width: 250px;
+    padding: 22px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+.value-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 30px rgba(0,0,0,0.15);
+}
+
+.value-icon {
+    font-size: 40px;
+    color: #004aad;
+    margin-bottom: 10px;
+}
+
+.value-card h3 {
+    color: #004aad;
+    margin-bottom: 8px;
+    font-size: 1.05rem;
+}
+
+.value-card p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* TEAM */
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.member.featured {
+    max-width: 260px;
+    transform: scale(1.08);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    border: 2px solid #004aad;
+}
+
+.member {
+    background: #fff;
+    max-width: 220px;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.35s;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+.member:hover {
+    transform: translateY(-6px);
+}
+
+.team-avatar {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #004aad, #00a3ff);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 14px;
+    font-size: 26px;
+}
+
+/* CONTACT */
+.cta {
+    text-align: center;
+    background: #eef5ff;
+    padding: 20px;
+    border-left: 5px solid #004aad;
+}
+
+/* FOOTER */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="logo.png" alt="SafeHearts Logo" style="height:60px; margin-bottom:15px;">
+    <h1>SafeHearts</h1>
+    <p>We build privacy-first apps that protect users, strengthen connections, and solve real-world problems.</p>
+</header>
+
+
+<nav>
+    <a href="/" class="nav-link"><i class="material-icons">home</i> Home</a>
+    <a href="https://safehearts.it.com/whatsclean/" class="nav-link"><i class="material-icons">apps</i> WhatsClean App</a>
+    <a href="/blog/" class="nav-link"><i class="material-icons">article</i> Blog</a>
+    <a href="/privacy.html" class="nav-link"><i class="material-icons">policy</i> Privacy Policy</a>
+    <a href="#contact" class="nav-link"><i class="material-icons">contact_mail</i> Contact</a>
+</nav>
+
+<section class="vision">
+    <h2>Our Vision</h2>
+    <p>To be the leading and most trusted provider, becoming customers’ first choice through innovation, quality, and exceptional service.</p>
+</section>
+
+<section class="mission">
+    <h2>Our Mission</h2>
+    <p>“To deliver high-end, affordable applications worldwide without compromising quality,
+        doing more with less while advancing sustainability and making a positive impact on
+        society—placing customers at the heart of everything we do.”</p>
+</section>
+
+<!-- CORE VALUES -->
+<section>
+    <h2>Our Core Values</h2>
+    <div class="core-values">
+
+        <div class="value-card">
+            <i class="material-icons value-icon">security</i>
+            <h3>Privacy & Security</h3>
+            <p>Protecting user data with the highest standards.</p>
+        </div>
+
+        <div class="value-card">
+            <i class="material-icons value-icon">verified_user</i>
+            <h3>Integrity</h3>
+            <p>Honest and transparent in all dealings.</p>
+        </div>
+
+        <div class="value-card">
+            <i class="material-icons value-icon">lightbulb</i>
+            <h3>Innovation</h3>
+            <p>Creating smart solutions for real-world problems.</p>
+        </div>
+
+        <div class="value-card">
+            <i class="material-icons value-icon">people</i>
+            <h3>Customer Focus</h3>
+            <p>Users are at the center of everything we do.</p>
+        </div>
+
+        <div class="value-card">
+            <i class="material-icons value-icon">eco</i>
+            <h3>Responsibility</h3>
+            <p>Building technology that benefits society.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="team-section">
+    <h2>Our Team</h2>
+
+    <div class="team">
+
+        <div class="member featured">
+            <img src="myphoto.jpg" alt="Zia Ullah" class="team-avatar">
+            <h4>Zia Ullah</h4>
+            <p>Founder & CEO</p>
+        </div>
+
+        <div class="member">
+            <div class="team-avatar">R</div>
+            <h4>Muhammad Rizwan Shah</h4>
+            <p>Legal Advisor</p>
+        </div>
+
+        <div class="member">
+            <div class="team-avatar">A</div>
+            <h4>Allah Bakhsh</h4>
+            <p>Software Engineer</p>
+        </div>
+
+        <div class="member">
+            <div class="team-avatar">S</div>
+            <h4>Saad Ullah</h4>
+        </div>
+
+        <div class="member">
+            <div class="team-avatar">M</div>
+            <h4>Maaz Azam</h4>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <div class="cta">
+        <p>Email: safehearts.apps@gmail.com</p>
+        <p>Website: safehearts.it.com</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SafeHearts Private Limited – All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
