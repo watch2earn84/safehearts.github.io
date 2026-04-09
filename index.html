@@ -17,21 +17,12 @@ body {
     color: #333;
     line-height: 1.6;
 }
-</style>
-</head>
 
-<body>
-
-<!-- ✅ EAGLE IMAGE (NOW CORRECT PLACE) -->
-<div style="text-align: center;">
-    <img src="eagle.jpg" alt="Eagle" style="width: 100%; height: 200px; object-fit: cover;">
-</div>
-
-</body> { 
-    font-family: 'Inter', sans-serif;
-    background: #f4f7fb;
-    color: #333;
-    line-height: 1.6;
+/* EAGLE IMAGE */
+.top-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
 /* HEADER */
@@ -163,6 +154,7 @@ h2 {
     width: 75px;
     height: 75px;
     border-radius: 50%;
+    object-fit: cover;
     background: linear-gradient(135deg, #004aad, #00a3ff);
     color: white;
     display: flex;
@@ -192,12 +184,14 @@ footer {
 
 <body>
 
+<!-- ✅ EAGLE IMAGE AT TOP -->
+<img src="eagle.jpg" class="top-image" alt="Eagle">
+
 <header>
     <img src="logo.png" alt="SafeHearts Logo" style="height:60px; margin-bottom:15px;">
     <h1>SafeHearts</h1>
     <p>We build privacy-first apps that protect users, strengthen connections, and solve real-world problems.</p>
 </header>
-
 
 <nav>
     <a href="/" class="nav-link"><i class="material-icons">home</i> Home</a>
@@ -214,16 +208,12 @@ footer {
 
 <section class="mission">
     <h2>Our Mission</h2>
-    <p>“To deliver high-end, affordable applications worldwide without compromising quality,
-        doing more with less while advancing sustainability and making a positive impact on
-        society—placing customers at the heart of everything we do.”</p>
+    <p>To deliver high-end, affordable applications worldwide without compromising quality, doing more with less while advancing sustainability and making a positive impact on society—placing customers at the heart of everything we do.</p>
 </section>
 
-<!-- CORE VALUES -->
 <section>
     <h2>Our Core Values</h2>
     <div class="core-values">
-
         <div class="value-card">
             <i class="material-icons value-icon">security</i>
             <h3>Privacy & Security</h3>
@@ -253,7 +243,6 @@ footer {
             <h3>Responsibility</h3>
             <p>Building technology that benefits society.</p>
         </div>
-
     </div>
 </section>
 
@@ -261,7 +250,6 @@ footer {
     <h2>Our Team</h2>
 
     <div class="team">
-
         <div class="member featured">
             <img src="zia.jpg" alt="Zia Ullah" class="team-avatar">
             <h4>Zia Ullah</h4>
@@ -289,7 +277,6 @@ footer {
             <div class="team-avatar">M</div>
             <h4>Maaz Azam</h4>
         </div>
-
     </div>
 </section>
 
@@ -306,4 +293,4 @@ footer {
 </footer>
 
 </body>
-</html>
+    </html>
