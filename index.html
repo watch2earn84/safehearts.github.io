@@ -1,558 +1,321 @@
-  1000	    box-shadow: 0 6px 20px rgba(0, 74, 173, 0.4);
-  1001	}
-  1002	
-  1003	/* RESPONSIVE */
-  1004	@media (max-width: 768px) {
-  1005	    nav {
-  1006	        justify-content: space-between;
-  1007	        padding: 8px 16px;
-  1008	    }
-  1009	    
-  1010	    .nav-links {
-  1011	        display: none;
-  1012	        position: absolute;
-  1013	        top: 100%;
-  1014	        left: 0;
-  1015	        right: 0;
-  1016	        background: var(--primary);
-  1017	        flex-direction: column;
-  1018	        padding: 16px;
-  1019	    }
-  1020	    
-  1021	    .nav-links.active {
-  1022	        display: flex;
-  1023	    }
-  1024	    
-  1025	    .nav-link {
-  1026	        padding: 12px 16px;
-  1027	        margin: 4px 0;
-  1028	    }
-  1029	    
-  1030	    .mobile-menu-btn {
-  1031	        display: block;
-  1032	    }
-  1033	    
-  1034	    header {
-  1035	        padding: 80px 20px 60px;
-  1036	    }
-  1037	    
-  1038	    .header-stats {
-  1039	        gap: 24px;
-  1040	    }
-  1041	    
-  1042	    .stat-value {
-  1043	        font-size: 1.5rem;
-  1044	    }
-  1045	    
-  1046	    section {
-  1047	        margin: 60px auto;
-  1048	    }
-  1049	    
-  1050	    .vision-mission-grid,
-  1051	    .contact-grid {
-  1052	        grid-template-columns: 1fr;
-  1053	    }
-  1054	    
-  1055	    .form-row {
-  1056	        grid-template-columns: 1fr;
-  1057	    }
-  1058	    
-  1059	    .footer-grid {
-  1060	        grid-template-columns: 1fr 1fr;
-  1061	        gap: 30px;
-  1062	    }
-  1063	    
-  1064	    .footer-brand {
-  1065	        grid-column: span 2;
-  1066	        max-width: 100%;
-  1067	    }
-  1068	}
-  1069	
-  1070	@media (max-width: 480px) {
-  1071	    .footer-grid {
-  1072	        grid-template-columns: 1fr;
-  1073	    }
-  1074	    
-  1075	    .footer-brand {
-  1076	        grid-column: span 1;
-  1077	    }
-  1078	    
-  1079	    .core-values {
-  1080	        grid-template-columns: 1fr;
-  1081	    }
-  1082	    
-  1083	    .team {
-  1084	        grid-template-columns: 1fr;
-  1085	        max-width: 280px;
-  1086	        margin: 0 auto;
-  1087	    }
-  1088	}
-  1089	
-  1090	/* Reduced motion support */
-  1091	@media (prefers-reduced-motion: reduce) {
-  1092	    *,
-  1093	    *::before,
-  1094	    *::after {
-  1095	        animation-duration: 0.01ms !important;
-  1096	        animation-iteration-count: 1 !important;
-  1097	        transition-duration: 0.01ms !important;
-  1098	    }
-  1099	    
-  1100	    html {
-  1101	        scroll-behavior: auto;
-  1102	    }
-  1103	}
-  1104	</style>
-  1105	</head>
-  1106	
-  1107	<body>
-  1108	    <!-- Skip to content link for accessibility -->
-  1109	    <a href="#main-content" class="skip-to-content">Skip to content</a>
-  1110	
-  1111	    <!-- Navigation -->
-  1112	    <nav id="navbar" role="navigation" aria-label="Main navigation">
-  1113	        <div class="nav-links" id="navLinks">
-  1114	            <a href="#home" class="nav-link" aria-label="Home">
-  1115	                <span class="material-icons" aria-hidden="true">home</span> Home
-  1116	            </a>
-  1117	            <a href="https://safehearts.it.com/whatsclean/" class="nav-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsClean App">
-  1118	                <span class="material-icons" aria-hidden="true">apps</span> WhatsClean App
-  1119	            </a>
-  1120	            <a href="#blog" class="nav-link" aria-label="Blog">
-  1121	                <span class="material-icons" aria-hidden="true">article</span> Blog
-  1122	            </a>
-  1123	            <a href="#privacy" class="nav-link" aria-label="Privacy Policy">
-  1124	                <span class="material-icons" aria-hidden="true">policy</span> Privacy Policy
-  1125	            </a>
-  1126	            <a href="#contact" class="nav-link" aria-label="Contact">
-  1127	                <span class="material-icons" aria-hidden="true">contact_mail</span> Contact
-  1128	            </a>
-  1129	        </div>
-  1130	        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
-  1131	            <span class="material-icons">menu</span>
-  1132	        </button>
-  1133	    </nav>
-  1134	
-  1135	    <!-- Header -->
-  1136	    <header id="home">
-  1137	        <!-- Animated particles -->
-  1138	        <div class="particles" aria-hidden="true">
-  1139	            <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
-  1140	            <div class="particle" style="left: 20%; animation-delay: 2s;"></div>
-  1141	            <div class="particle" style="left: 30%; animation-delay: 4s;"></div>
-  1142	            <div class="particle" style="left: 40%; animation-delay: 1s;"></div>
-  1143	            <div class="particle" style="left: 50%; animation-delay: 3s;"></div>
-  1144	            <div class="particle" style="left: 60%; animation-delay: 5s;"></div>
-  1145	            <div class="particle" style="left: 70%; animation-delay: 2.5s;"></div>
-  1146	            <div class="particle" style="left: 80%; animation-delay: 4.5s;"></div>
-  1147	            <div class="particle" style="left: 90%; animation-delay: 1.5s;"></div>
-  1148	        </div>
-  1149	
-  1150	        <div class="logo-container">
-  1151	            <div class="logo-fallback" role="img" aria-label="SafeHearts Logo">💙</div>
-  1152	        </div>
-  1153	        <h1>SafeHearts</h1>
-  1154	        <p class="tagline">Care, Connect, Protect</p>
-  1155	        <p>We build privacy-first apps that protect users, strengthen connections, and solve real-world problems. Your data stays yours—always.</p>
-  1156	        
-  1157	        <div class="header-cta">
-  1158	            <a href="#contact" class="btn btn-primary">
-  1159	                <span class="material-icons" aria-hidden="true">favorite</span> Get in Touch
-  1160	            </a>
-  1161	            <a href="https://safehearts.it.com/whatsclean/" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
-  1162	                <span class="material-icons" aria-hidden="true">app_shortcut</span> Explore WhatsClean
-  1163	            </a>
-  1164	        </div>
-  1165	
-  1166	        <div class="header-stats">
-  1167	            <div class="stat-item">
-  1168	                <span class="stat-value">100%</span>
-  1169	                <span class="stat-label">Privacy Focused</span>
-  1170	            </div>
-  1171	            <div class="stat-item">
-  1172	                <span class="stat-value">10K+</span>
-  1173	                <span class="stat-label">Active Users</span>
-  1174	            </div>
-  1175	            <div class="stat-item">
-  1176	                <span class="stat-value">4.9★</span>
-  1177	                <span class="stat-label">App Rating</span>
-  1178	            </div>
-  1179	        </div>
-  1180	
-  1181	        <div class="scroll-indicator" aria-hidden="true">
-  1182	            <span></span>
-  1183	        </div>
-  1184	    </header>
-  1185	
-  1186	    <!-- Main Content -->
-  1187	    <main id="main-content">
-  1188	        <!-- Vision & Mission -->
-  1189	        <section aria-labelledby="vision-mission-heading">
-  1190	            <div class="section-header">
-  1191	                <span class="section-badge">Our Purpose</span>
-  1192	                <h2 id="vision-mission-heading">What Drives Us</h2>
-  1193	            </div>
-  1194	            <div class="vision-mission-grid">
-  1195	                <div class="vision">
-  1196	                    <h2><span class="material-icons" aria-hidden="true">visibility</span> Our Vision</h2>
-  1197	                    <p>To be the leading and most trusted provider of privacy-focused applications, becoming customers' first choice through innovation, quality, and exceptional service. We envision a world where technology empowers without compromising personal privacy.</p>
-  1198	                </div>
-  1199	                <div class="mission">
-  1200	                    <h2><span class="material-icons" aria-hidden="true">track_changes</span> Our Mission</h2>
-  1201	                    <p>To deliver high-end, affordable applications worldwide without compromising quality. We believe in doing more with less while advancing sustainability and making a positive impact on society—placing customers at the heart of everything we do.</p>
-  1202	                </div>
-  1203	            </div>
-  1204	        </section>
-  1205	
-  1206	        <!-- Core Values -->
-  1207	        <section aria-labelledby="values-heading">
-  1208	            <div class="section-header">
-  1209	                <span class="section-badge">Our Principles</span>
-  1210	                <h2 id="values-heading">Core Values</h2>
-  1211	                <p class="section-description">The principles that guide every decision we make and every product we build.</p>
-  1212	            </div>
-  1213	            <div class="core-values">
-  1214	                <div class="value-card">
-  1215	                    <span class="material-icons value-icon" aria-hidden="true">security</span>
-  1216	                    <h3>Privacy & Security</h3>
-  1217	                    <p>Protecting user data with the highest standards. End-to-end encryption and zero-knowledge architecture.</p>
-  1218	                </div>
-  1219	
-  1220	                <div class="value-card">
-  1221	                    <span class="material-icons value-icon" aria-hidden="true">verified_user</span>
-  1222	                    <h3>Integrity</h3>
-  1223	                    <p>Honest and transparent in all our dealings. We keep our promises and communicate openly.</p>
-  1224	                </div>
-  1225	
-  1226	                <div class="value-card">
-  1227	                    <span class="material-icons value-icon" aria-hidden="true">lightbulb</span>
-  1228	                    <h3>Innovation</h3>
-  1229	                    <p>Creating smart solutions for real-world problems. We push boundaries while keeping it simple.</p>
-  1230	                </div>
-  1231	
-  1232	                <div class="value-card">
-  1233	                    <span class="material-icons value-icon" aria-hidden="true">people</span>
-  1234	                    <h3>Customer Focus</h3>
-  1235	                    <p>Users are at the center of everything we do. We listen, learn, and continuously improve.</p>
-  1236	                </div>
-  1237	
-  1238	                <div class="value-card">
-  1239	                    <span class="material-icons value-icon" aria-hidden="true">eco</span>
-  1240	                    <h3>Responsibility</h3>
-  1241	                    <p>Building technology that benefits society and minimizes environmental impact.</p>
-  1242	                </div>
-  1243	            </div>
-  1244	        </section>
-  1245	
-  1246	        <!-- Team Section -->
-  1247	        <section id="team-section" aria-labelledby="team-heading">
-  1248	            <div class="section-header">
-  1249	                <span class="section-badge">Meet the Team</span>
-  1250	                <h2 id="team-heading">The People Behind SafeHearts</h2>
-  1251	                <p class="section-description">A passionate team dedicated to protecting your privacy and building technology that matters.</p>
-  1252	            </div>
-  1253	
-  1254	            <div class="team">
-  1255	                <div class="member featured">
-  1256	                    <img src="zia.jpg" alt="Zia Ullah - Founder & CEO" class="team-avatar" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-  1257	                    <div class="team-avatar" style="display: none;">ZU</div>
-  1258	                    <h4>Zia Ullah</h4>
-  1259	                    <p>Founder & CEO</p>
-  1260	                    <p class="member-bio">Visionary leader driving SafeHearts mission to protect digital privacy.</p>
-  1261	                    <div class="member-social">
-  1262	                        <a href="#" aria-label="Zia's LinkedIn"><span class="material-icons" style="font-size: 16px;">link</span></a>
-  1263	                        <a href="#" aria-label="Zia's Twitter"><span class="material-icons" style="font-size: 16px;">chat</span></a>
-  1264	                        <a href="mailto:zia@safehearts.it.com" aria-label="Email Zia"><span class="material-icons" style="font-size: 16px;">email</span></a>
-  1265	                    </div>
-  1266	                </div>
-  1267	
-  1268	                <div class="member">
-  1269	                    <img src="rizwan.jpg" alt="Muhammad Rizwan Shah - Legal Advisor" class="team-avatar" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-  1270	                    <div class="team-avatar" style="display: none;">MRS</div>
-  1271	                    <h4>Muhammad Rizwan Shah</h4>
-  1272	                    <p>Legal Advisor</p>
-  1273	                    <p class="member-bio">Expert in data protection laws and privacy regulations.</p>
-  1274	                    <div class="member-social">
-  1275	                        <a href="#" aria-label="Rizwan's LinkedIn"><span class="material-icons" style="font-size: 16px;">link</span></a>
-  1276	                        <a href="mailto:rizwan@safehearts.it.com" aria-label="Email Rizwan"><span class="material-icons" style="font-size: 16px;">email</span></a>
-  1277	                    </div>
-  1278	                </div>
-  1279	
-  1280	                <div class="member">
-  1281	                    <div class="team-avatar">AB</div>
-  1282	                    <h4>Allah Bakhsh</h4>
-  1283	                    <p>Software Engineer</p>
-  1284	                    <p class="member-bio">Building secure and scalable privacy-first applications.</p>
-  1285	                    <div class="member-social">
-  1286	                        <a href="#" aria-label="Allah's LinkedIn"><span class="material-icons" style="font-size: 16px;">link</span></a>
-  1287	                        <a href="#" aria-label="Allah's Twitter"><span class="material-icons" style="font-size: 16px;">chat</span></a>
-  1288	                        <a href="mailto:allah@safehearts.it.com" aria-label="Email Allah"><span class="material-icons" style="font-size: 16px;">email</span></a>
-  1289	                    </div>
-  1290	                </div>
-  1291	
-  1292	                <div class="member">
-  1293	                    <div class="team-avatar">SU</div>
-  1294	                    <h4>Saad Ullah</h4>
-  1295	                    <p>Developer</p>
-  1296	                    <p class="member-bio">Crafting clean code and intuitive user experiences.</p>
-  1297	                    <div class="member-social">
-  1298	                        <a href="#" aria-label="Saad's LinkedIn"><span class="material-icons" style="font-size: 16px;">link</span></a>
-  1299	                        <a href="mailto:saad@safehearts.it.com" aria-label="Email Saad"><span class="material-icons" style="font-size: 16px;">email</span></a>
-  1300	                    </div>
-  1301	                </div>
-  1302	
-  1303	                <div class="member">
-  1304	                    <div class="team-avatar">MA</div>
-  1305	                    <h4>Maaz Azam</h4>
-  1306	                    <p>Developer</p>
-  1307	                    <p class="member-bio">Turning ideas into reality through elegant solutions.</p>
-  1308	                    <div class="member-social">
-  1309	                        <a href="#" aria-label="Maaz's LinkedIn"><span class="material-icons" style="font-size: 16px;">link</span></a>
-  1310	                        <a href="#" aria-label="Maaz's Twitter"><span class="material-icons" style="font-size: 16px;">chat</span></a>
-  1311	                        <a href="mailto:maaz@safehearts.it.com" aria-label="Email Maaz"><span class="material-icons" style="font-size: 16px;">email</span></a>
-  1312	                    </div>
-  1313	                </div>
-  1314	            </div>
-  1315	
-  1316	            <div class="join-team">
-  1317	                <p>Want to join our mission?</p>
-  1318	                <a href="mailto:careers@safehearts.it.com" class="btn btn-primary" style="padding: 12px 24px; font-size: 0.9rem;">
-  1319	                    <span class="material-icons" aria-hidden="true">work</span> View Open Positions
-  1320	                </a>
-  1321	            </div>
-  1322	        </section>
-  1323	
-  1324	        <!-- Contact Section -->
-  1325	        <section id="contact" aria-labelledby="contact-heading">
-  1326	            <div class="section-header">
-  1327	                <span class="section-badge">Get in Touch</span>
-  1328	                <h2 id="contact-heading">Contact Us</h2>
-  1329	                <p class="section-description">Have questions or want to collaborate? We'd love to hear from you.</p>
-  1330	            </div>
-  1331	
-  1332	            <div class="contact-grid">
-  1333	                <div class="contact-info">
-  1334	                    <h3>Contact Information</h3>
-  1335	                    
-  1336	                    <a href="mailto:safehearts.apps@gmail.com" class="contact-item">
-  1337	                        <div class="icon">
-  1338	                            <span class="material-icons" aria-hidden="true">email</span>
-  1339	                        </div>
-  1340	                        <div>
-  1341	                            <div class="label">Email</div>
-  1342	                            <div class="value">safehearts.apps@gmail.com</div>
-  1343	                        </div>
-  1344	                    </a>
-  1345	
-  1346	                    <a href="https://safehearts.it.com" target="_blank" rel="noopener noreferrer" class="contact-item">
-  1347	                        <div class="icon">
-  1348	                            <span class="material-icons" aria-hidden="true">language</span>
-  1349	                        </div>
-  1350	                        <div>
-  1351	                            <div class="label">Website</div>
-  1352	                            <div class="value">safehearts.it.com</div>
-  1353	                        </div>
-  1354	                    </a>
-  1355	
-  1356	                    <div class="contact-item">
-  1357	                        <div class="icon">
-  1358	                            <span class="material-icons" aria-hidden="true">location_on</span>
-  1359	                        </div>
-  1360	                        <div>
-  1361	                            <div class="label">Location</div>
-  1362	                            <div class="value">Remote-first Team</div>
-  1363	                        </div>
-  1364	                    </div>
-  1365	
-  1366	                    <div class="contact-item">
-  1367	                        <div class="icon">
-  1368	                            <span class="material-icons" aria-hidden="true">support_agent</span>
-  1369	                        </div>
-  1370	                        <div>
-  1371	                            <div class="label">Support Hours</div>
-  1372	                            <div class="value">24/7 Online Support</div>
-  1373	                        </div>
-  1374	                    </div>
-  1375	
-  1376	                    <div class="response-time">
-  1377	                        <span class="material-icons" aria-hidden="true">check_circle</span>
-  1378	                        <p>We typically respond within 24 hours</p>
-  1379	                    </div>
-  1380	                </div>
-  1381	
-  1382	                <div class="contact-form">
-  1383	                    <h3>Send us a Message</h3>
-  1384	                    
-  1385	                    <form id="contactForm" action="#" method="POST">
-  1386	                        <div class="form-row">
-  1387	                            <div class="form-group">
-  1388	                                <label for="name">Your Name</label>
-  1389	                                <input type="text" id="name" name="name" placeholder="John Doe" required aria-required="true">
-  1390	                            </div>
-  1391	                            <div class="form-group">
-  1392	                                <label for="email">Email Address</label>
-  1393	                                <input type="email" id="email" name="email" placeholder="john@example.com" required aria-required="true">
-  1394	                            </div>
-  1395	                        </div>
-  1396	
-  1397	                        <div class="form-group">
-  1398	                            <label for="subject">Subject</label>
-  1399	                            <input type="text" id="subject" name="subject" placeholder="How can we help?" required aria-required="true">
-  1400	                        </div>
-  1401	
-  1402	                        <div class="form-group">
-  1403	                            <label for="message">Message</label>
-  1404	                            <textarea id="message" name="message" placeholder="Tell us more about your inquiry..." required aria-required="true"></textarea>
-  1405	                        </div>
-  1406	
-  1407	                        <button type="submit" class="btn-submit">
-  1408	                            <span class="material-icons" aria-hidden="true">send</span> Send Message
-  1409	                        </button>
-  1410	
-  1411	                        <p class="form-footer">
-  1412	                            By submitting this form, you agree to our <a href="#privacy">Privacy Policy</a>.
-  1413	                        </p>
-  1414	                    </form>
-  1415	
-  1416	                    <!-- Success message (hidden by default) -->
-  1417	                    <div id="formSuccess" class="form-success" style="display: none;">
-  1418	                        <div class="icon">
-  1419	                            <span class="material-icons" aria-hidden="true">check_circle</span>
-  1420	                        </div>
-  1421	                        <h4>Message Sent!</h4>
-  1422	                        <p>Thank you for reaching out. We'll get back to you soon.</p>
-  1423	                    </div>
-  1424	                </div>
-  1425	            </div>
-  1426	        </section>
-  1427	    </main>
-  1428	
-  1429	    <!-- Footer -->
-  1430	    <footer role="contentinfo">
-  1431	        <div class="footer-grid">
-  1432	            <div class="footer-brand">
-  1433	                <div class="logo">
-  1434	                    <span aria-hidden="true">💙</span> SafeHearts
-  1435	                </div>
-  1436	                <p>Building privacy-first apps that protect users, strengthen connections, and solve real-world problems.</p>
-  1437	                <div class="footer-social">
-  1438	                    <a href="#" aria-label="Twitter"><span class="material-icons" style="font-size: 18px;">chat</span></a>
-  1439	                    <a href="#" aria-label="LinkedIn"><span class="material-icons" style="font-size: 18px;">business</span></a>
-  1440	                    <a href="#" aria-label="GitHub"><span class="material-icons" style="font-size: 18px;">code</span></a>
-  1441	                    <a href="#" aria-label="Instagram"><span class="material-icons" style="font-size: 18px;">photo_camera</span></a>
-  1442	                </div>
-  1443	            </div>
-  1444	
-  1445	            <div class="footer-links">
-  1446	                <h4>Product</h4>
-  1447	                <ul>
-  1448	                    <li><a href="https://safehearts.it.com/whatsclean/" target="_blank" rel="noopener noreferrer">WhatsClean App</a></li>
-  1449	                    <li><a href="#features">Features</a></li>
-  1450	                    <li><a href="#pricing">Pricing</a></li>
-  1451	                    <li><a href="#download">Download</a></li>
-  1452	                </ul>
-  1453	            </div>
-  1454	
-  1455	            <div class="footer-links">
-  1456	                <h4>Company</h4>
-  1457	                <ul>
-  1458	                    <li><a href="#home">About Us</a></li>
-  1459	                    <li><a href="#team-section">Our Team</a></li>
-  1460	                    <li><a href="mailto:careers@safehearts.it.com">Careers</a></li>
-  1461	                    <li><a href="#blog">Blog</a></li>
-  1462	                </ul>
-  1463	            </div>
-  1464	
-  1465	            <div class="footer-links">
-  1466	                <h4>Legal</h4>
-  1467	                <ul>
-  1468	                    <li><a href="#privacy">Privacy Policy</a></li>
-  1469	                    <li><a href="#terms">Terms of Service</a></li>
-  1470	                    <li><a href="#cookies">Cookie Policy</a></li>
-  1471	                    <li><a href="#gdpr">GDPR</a></li>
-  1472	                </ul>
-  1473	            </div>
-  1474	        </div>
-  1475	
-  1476	        <div class="footer-bottom">
-  1477	            <p>&copy; 2026 SafeHearts Private Limited. All Rights Reserved.</p>
-  1478	            <p>Made with <span class="heart" aria-hidden="true">❤️</span> for a safer digital world</p>
-  1479	        </div>
-  1480	    </footer>
-  1481	
-  1482	    <!-- Scroll to top button -->
-  1483	    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
-  1484	        <span class="material-icons">arrow_upward</span>
-  1485	    </button>
-  1486	
-  1487	    <!-- JavaScript -->
-  1488	    <script>
-  1489	        // Mobile menu toggle
-  1490	        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-  1491	        const navLinks = document.getElementById('navLinks');
-  1492	        
-  1493	        mobileMenuBtn.addEventListener('click', () => {
-  1494	            const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
-  1495	            mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
-  1496	            navLinks.classList.toggle('active');
-  1497	        });
-  1498	
-  1499	        // Navbar scroll effect
-  1500	        const navbar = document.getElementById('navbar');
-  1501	        window.addEventListener('scroll', () => {
-  1502	            if (window.scrollY > 50) {
-  1503	                navbar.classList.add('scrolled');
-  1504	            } else {
-  1505	                navbar.classList.remove('scrolled');
-  1506	            }
-  1507	        });
-  1508	
-  1509	        // Scroll to top button
-  1510	        const scrollToTopBtn = document.getElementById('scrollToTop');
-  1511	        window.addEventListener('scroll', () => {
-  1512	            if (window.scrollY > 300) {
-  1513	                scrollToTopBtn.classList.add('visible');
-  1514	            } else {
-  1515	                scrollToTopBtn.classList.remove('visible');
-  1516	            }
-  1517	        });
-  1518	
-  1519	        scrollToTopBtn.addEventListener('click', () => {
-  1520	            window.scrollTo({ top: 0, behavior: 'smooth' });
-  1521	        });
-  1522	
-  1523	        // Contact form handling
-  1524	        const contactForm = document.getElementById('contactForm');
-  1525	        const formSuccess = document.getElementById('formSuccess');
-  1526	
-  1527	        contactForm.addEventListener('submit', (e) => {
-  1528	            e.preventDefault();
-  1529	            // Simulate form submission
-  1530	            contactForm.style.display = 'none';
-  1531	            formSuccess.style.display = 'block';
-  1532	            
-  1533	            // Reset after 3 seconds
-  1534	            setTimeout(() => {
-  1535	                formSuccess.style.display = 'none';
-  1536	                contactForm.style.display = 'block';
-  1537	                contactForm.reset();
-  1538	            }, 3000);
-  1539	        });
-  1540	
-  1541	        // Smooth scroll for anchor links
-  1542	        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  1543	            anchor.addEventListener('click', function(e) {
-  1544	                const href = this.getAttribute('href');
-  1545	                if (href !== '#') {
-  1546	                    e.preventDefault();
-  1547	                    const target = document.querySelector(href);
-  1548	                    if (target) {
-  1549	                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  1550	                    }
-  1551	                }
-  1552	            });
-  1553	        });
-  1554	    </script>
-  1555	</body>
-  1556	</html>
-  1557	
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SafeHearts – Care, Connect, Protect</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<style>
+:root {
+    --primary: #004aad;
+    --accent: #00c6ff;
+    --bg: #f7f9fc;
+    --text: #1a1a1a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* NAVBAR */
+nav {
+    position: fixed;
+    width: 100%;
+    background: rgba(0,74,173,0.9);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 30px;
+    z-index: 1000;
+}
+
+.logo {
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+}
+
+/* HEADER */
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #004aad, #00c6ff);
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+.tagline {
+    opacity: 0.9;
+    margin: 10px 0;
+}
+
+.header-cta {
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 12px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+    margin: 5px;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: white;
+    color: #004aad;
+}
+
+.btn-outline {
+    border: 2px solid white;
+    color: white;
+}
+
+/* PARTICLES */
+.particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: float 6s infinite linear;
+}
+
+@keyframes float {
+    from { transform: translateY(0); }
+    to { transform: translateY(-800px); }
+}
+
+/* SECTIONS */
+section {
+    padding: 80px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* CARDS */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,74,173,0.2);
+}
+
+/* TEAM */
+.team img {
+    width: 80px;
+    border-radius: 50%;
+}
+
+/* CONTACT */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* FOOTER */
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: #004aad;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+    <div class="logo">💙 SafeHearts</div>
+    <div class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#team" class="nav-link">Team</a>
+        <a href="#contact" class="nav-link">Contact</a>
+    </div>
+    <button class="mobile-menu-btn" id="menuBtn">
+        <span class="material-icons">menu</span>
+    </button>
+</nav>
+
+<!-- HEADER -->
+<header id="home">
+
+    <!-- Particles -->
+    <div class="particle" style="left:10%"></div>
+    <div class="particle" style="left:30%"></div>
+    <div class="particle" style="left:50%"></div>
+    <div class="particle" style="left:70%"></div>
+    <div class="particle" style="left:90%"></div>
+
+    <h1>SafeHearts</h1>
+    <p class="tagline">Care, Connect, Protect</p>
+    <p>Privacy-first apps that protect your digital life.</p>
+
+    <div class="header-cta">
+        <a href="#contact" class="btn btn-primary">Get in Touch</a>
+        <a href="#" class="btn btn-outline">Explore App</a>
+    </div>
+</header>
+
+<!-- VALUES -->
+<section>
+    <div class="section-header">
+        <h2>Core Values</h2>
+    </div>
+
+    <div class="grid">
+        <div class="card"><h3>Security</h3><p>Top-level data protection.</p></div>
+        <div class="card"><h3>Integrity</h3><p>Transparent operations.</p></div>
+        <div class="card"><h3>Innovation</h3><p>Smart solutions.</p></div>
+    </div>
+</section>
+
+<!-- TEAM -->
+<section id="team">
+    <div class="section-header">
+        <h2>Our Team</h2>
+    </div>
+
+    <div class="grid team">
+        <div class="card">
+            <img src="zia.jpg" onerror="this.style.display='none'">
+            <h4>Zia Ullah</h4>
+            <p>CEO</p>
+        </div>
+
+        <div class="card">
+            <img src="rizwan.jpg" onerror="this.style.display='none'">
+            <h4>Rizwan Shah</h4>
+            <p>Legal Advisor</p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <div class="section-header">
+        <h2>Contact Us</h2>
+    </div>
+
+    <div class="contact-grid">
+        <div>
+            <p>Email: safehearts.apps@gmail.com</p>
+            <p>24/7 Support</p>
+        </div>
+
+        <form>
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Message"></textarea>
+            <button class="btn btn-primary">Send</button>
+        </form>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 SafeHearts. All Rights Reserved.</p>
+</footer>
+
+<script>
+const btn = document.getElementById('menuBtn');
+const nav = document.getElementById('navLinks');
+
+btn.onclick = () => {
+    nav.classList.toggle('active');
+};
+</script>
+
+</body>
+</html>
