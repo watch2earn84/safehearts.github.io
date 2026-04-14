@@ -110,6 +110,54 @@ h2 {
     margin-bottom: 10px;
 }
 
+/* TEAM */
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.member {
+    background: white;
+    width: 220px;
+    padding: 20px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.member:hover {
+    transform: translateY(-6px);
+}
+
+.member.featured {
+    transform: scale(1.05);
+    border: 2px solid #004aad;
+}
+
+/* FIXED IMAGE DISPLAY */
+.team-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 12px;
+    border: 3px solid #004aad;
+}
+
+/* INITIAL AVATAR */
+.avatar-text {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#004aad;
+    color:#fff;
+    font-weight:600;
+}
+
 /* FOOTER */
 footer {
     background: #111;
@@ -164,7 +212,6 @@ footer {
 <!-- CORE VALUES -->
 <section>
 <h2>Our Core Values</h2>
-
 <div class="core-values">
 
 <div class="value-card">
@@ -200,8 +247,45 @@ footer {
 </div>
 </section>
 
+<!-- TEAM -->
+<section>
+<h2>Our Team</h2>
+
+<div class="team">
+
+<div class="member featured">
+<img src="zia.jpg" alt="Zia Ullah" class="team-avatar">
+<h4>Zia Ullah</h4>
+<p>Founder & CEO</p>
+</div>
+
+<div class="member">
+<img src="rizwan.jpg" alt="Muhammad Rizwan Shah" class="team-avatar">
+<h4>Muhammad Rizwan Shah</h4>
+<p>Legal Advisor</p>
+</div>
+
+<div class="member">
+<div class="team-avatar avatar-text">A</div>
+<h4>Allah Bakhsh</h4>
+<p>Software Engineer</p>
+</div>
+
+<div class="member">
+<div class="team-avatar avatar-text">S</div>
+<h4>Saad Ullah</h4>
+</div>
+
+<div class="member">
+<div class="team-avatar avatar-text">M</div>
+<h4>Maaz Azam</h4>
+</div>
+
+</div>
+</section>
+
 <footer>
-    <p>© 2026 SafeHearts Private Limited – All Rights Reserved</p>
+<p>© 2026 SafeHearts Private Limited – All Rights Reserved</p>
 </footer>
 
 </body>
