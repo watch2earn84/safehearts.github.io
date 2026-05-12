@@ -8,114 +8,221 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
+            background-color: #f5f7fa;
             color: #333;
             margin: 0;
             padding: 20px;
-            line-height: 1.6;
+            line-height: 1.7;
         }
+
         .container {
             max-width: 900px;
             margin: auto;
             background: #ffffff;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
         }
+
         h1, h2 {
             color: #2c3e50;
         }
+
         h1 {
             text-align: center;
+            margin-bottom: 10px;
         }
+
+        h2 {
+            margin-top: 30px;
+            border-bottom: 1px solid #e5e5e5;
+            padding-bottom: 5px;
+        }
+
         p {
-            margin: 10px 0;
+            margin: 12px 0;
         }
+
         ul {
             margin-left: 20px;
         }
-        .footer {
-            margin-top: 30px;
-            font-size: 14px;
-            text-align: center;
-            color: #777;
+
+        li {
+            margin-bottom: 10px;
         }
+
         a {
             color: #0066cc;
             text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+            border-top: 1px solid #e5e5e5;
+            padding-top: 15px;
+        }
+
+        .updated {
+            text-align: center;
+            color: #666;
+            margin-bottom: 25px;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
+
     <h1>Privacy Policy</h1>
-    <p><strong>Last Updated:</strong> January 07, 2026</p>
+
+    <p class="updated">
+        <strong>Last Updated:</strong> January 07, 2026
+    </p>
 
     <p>
-        This Privacy Policy describes how <strong>WhatsCleaner</strong> (“the App”) handles user data.
-        WhatsCleaner is a utility app designed to help users manage and clean WhatsApp and
-        WhatsApp Business media files stored locally on their device.
+        This Privacy Policy describes how <strong>WhatsCleaner</strong> (“the App”)
+        handles user data. WhatsCleaner is a utility app designed to help users
+        manage and clean WhatsApp and WhatsApp Business media files stored locally
+        on their device.
     </p>
 
     <h2>1. Data Collection and Usage</h2>
-    <p><strong>Personal Data:</strong><br>
-        WhatsCleaner does not collect, store, or transmit any personally identifiable information
-        such as names, phone numbers, email addresses, or contacts.
+
+    <p>
+        <strong>Personal Data:</strong><br>
+        WhatsCleaner does not directly collect, store, or transmit personally
+        identifiable information such as names, phone numbers, or email addresses.
     </p>
 
-    <p><strong>Media Files:</strong><br>
-        The App accesses WhatsApp and WhatsApp Business media files only after explicit user
-        permission is granted through Android’s Storage Access Framework (SAF). Access is limited
-        strictly to folders selected by the user. All processing occurs locally on the device, and
-        media files are never uploaded or shared.
+    <p>
+        <strong>Device Identifiers and Analytics:</strong><br>
+        The App uses third-party SDKs (such as Google AdMob and Google Play Services)
+        that may automatically collect Device or other IDs, including the Advertising ID.
+        These are used for:
+    </p>
+
+    <ul>
+        <li><strong>Advertising:</strong> Providing relevant ads and measuring ad performance.</li>
+        <li><strong>Analytics:</strong> Understanding how the App is used to improve performance.</li>
+        <li><strong>Fraud Prevention:</strong> Ensuring secure transactions and app integrity.</li>
+    </ul>
+
+    <p>
+        <strong>Purchase History:</strong><br>
+        Since the App offers a Premium upgrade, information regarding your purchase
+        history is processed through the Google Play Billing Library to manage
+        subscriptions or one-time purchases. We do not store your credit card
+        or payment details.
+    </p>
+
+    <p>
+        <strong>Media Files:</strong><br>
+        The App accesses WhatsApp and WhatsApp Business media files only after
+        explicit user permission is granted through Android’s Storage Access
+        Framework (SAF). All file processing, including scanning and labeling,
+        occurs locally on the device. Your media files are never uploaded,
+        shared, or transmitted off-device.
     </p>
 
     <h2>2. Permissions</h2>
+
     <ul>
         <li>
             <strong>Folder Access (Storage Access Framework):</strong>
-            Used to view, manage, and delete media files only within user-selected WhatsApp and
-            WhatsApp Business folders.
+            Used to view, manage, and delete media files within user-selected folders.
         </li>
+
         <li>
-            <strong>Media Permissions (READ_MEDIA_IMAGES / READ_MEDIA_VIDEO):</strong>
-            Used to display previews and thumbnails of selected media files.
+            <strong>AD_ID Permission:</strong>
+            Used to provide personalized advertising through the Google AdMob SDK.
         </li>
+
         <li>
-            <strong>Internet:</strong>
-            Used only for essential app functionality such as loading libraries or non-personal content.
+            <strong>Billing Permission:</strong>
+            Used to process in-app purchases through the Google Play Store.
+        </li>
+
+        <li>
+            <strong>Internet Permission:</strong>
+            Used for loading ads, processing billing, and checking app updates.
         </li>
     </ul>
 
     <h2>3. Third-Party Services</h2>
+
     <p>
-        WhatsCleaner may use Google Play Services, which operate under their own privacy policies.
+        WhatsCleaner uses the following third-party services, which may collect
+        and process data according to their own privacy policies:
     </p>
 
-    <h2>4. Data Retention and Deletion</h2>
+    <ul>
+        <li><strong>Google Play Services:</strong> Used for app updates and core functionality.</li>
+        <li><strong>Google AdMob:</strong> Used for displaying advertisements.</li>
+        <li><strong>Google Play Billing:</strong> Used for secure in-app purchases.</li>
+        <li><strong>ML Kit:</strong> Used for local image categorization.</li>
+    </ul>
+
+    <h2>4. Data Security</h2>
+
+    <ul>
+        <li>
+            <strong>Encryption in Transit:</strong>
+            All transmitted data, such as billing information or ad requests,
+            is encrypted using industry-standard HTTPS/TLS protocols.
+        </li>
+
+        <li>
+            <strong>Local Processing:</strong>
+            All media scanning and file management are handled locally on your device
+            and are not sent to any cloud server.
+        </li>
+    </ul>
+
+    <h2>5. Data Retention and Deletion</h2>
+
     <p>
-        WhatsCleaner does not store user data on external servers. Any media deletion is performed
-        only upon user action and permanently removes the file from the device.
+        WhatsCleaner does not store user media on external servers.
+        Any media deletion is performed only upon your action and permanently
+        removes the file from your device.
     </p>
 
-    <h2>5. Children’s Privacy</h2>
     <p>
-        WhatsCleaner is not intended for children under the age of 13 and does not knowingly
-        collect personal data from children.
+        For data collected by Google services, such as Advertising IDs,
+        users may reset their Advertising ID or manage privacy settings
+        through their Google Account at any time.
     </p>
 
-    <h2>6. Contact Us</h2>
+    <h2>6. Children’s Privacy</h2>
+
     <p>
-        If you have any questions about this Privacy Policy, please contact us at:<br>
-        <aम
-        <a href="mailto:whatscleaner5@gmail.com">whatscleaner5@gmail.com</a>
+        WhatsCleaner is not intended for children under the age of 13
+        and does not knowingly collect personal data from children.
+    </p>
+
+    <h2>7. Contact Us</h2>
+
+    <p>
+        If you have any questions about this Privacy Policy, please contact us at:
+    </p>
+
+    <p>
+        <a href="mailto:whatscleaner5@gmail.com">
+            whatscleaner5@gmail.com
+        </a>
     </p>
 
     <div class="footer">
         © 2026 WhatsCleaner. All rights reserved.
     </div>
+
 </div>
 
 </body>
-  </html>
+</html>
