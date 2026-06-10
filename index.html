@@ -67,6 +67,7 @@ nav {
     flex-wrap: wrap;
     position: sticky;
     top: 0;
+    z-index: 1000;
 }
 
 .nav-link {
@@ -130,6 +131,73 @@ h2 {
     font-size: 40px;
     color: #004aad;
     margin-bottom: 10px;
+}
+
+/* BLOG SECTION COMPONENT */
+.blog-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.blog-card {
+    background: white;
+    width: 340px;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0,74,173,0.12);
+}
+
+.blog-tag {
+    display: inline-block;
+    background: #eef4ff;
+    color: #004aad;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+
+.blog-card h3 {
+    font-size: 1.25rem;
+    color: #222;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.blog-card p {
+    font-size: 0.92rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.blog-btn {
+    color: #004aad;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: auto;
+}
+
+.blog-btn:hover {
+    color: #00a3ff;
 }
 
 /* TEAM */
@@ -213,7 +281,7 @@ footer {
 <nav>
     <a href="/" class="nav-link"><i class="material-icons">home</i> Home</a>
     <a href="https://safehearts.it.com/whatsclean/" class="nav-link"><i class="material-icons">apps</i> WhatsClean App</a>
-    <a href="/blog/" class="nav-link"><i class="material-icons">article</i> Blog</a>
+    <a href="#blog" class="nav-link"><i class="material-icons">article</i> Blog</a>
     <a href="/privacy.html" class="nav-link"><i class="material-icons">policy</i> Privacy Policy</a>
     <a href="#contact" class="nav-link"><i class="material-icons">contact_mail</i> Contact</a>
 </nav>
@@ -280,6 +348,34 @@ footer {
 </div>
 
 </div>
+</section>
+
+<!-- NEW BLOG INSIGHTS SECTION -->
+<section id="blog">
+    <h2>Latest Insights & Guides</h2>
+    <div class="blog-grid">
+        
+        <!-- Card 1: Document Search for Education -->
+        <div class="blog-card">
+            <div>
+                <span class="blog-tag">Storage Optimization</span>
+                <h3>Find & Organize WhatsApp Study Notes on Android</h3>
+                <p>Buried in class PDFs and assignment notes? Learn how tutors and students can instantly isolate and clean document storage by date safely.</p>
+            </div>
+            <a href="/how-to-find-whatsapp-documents-android.html" class="blog-btn">Read Full Guide <i class="material-icons" style="font-size:16px;">arrow_forward</i></a>
+        </div>
+
+        <!-- Card 2: Status Saving Guide -->
+        <div class="blog-card">
+            <div>
+                <span class="blog-tag">Media Utilities</span>
+                <h3>Save WhatsApp Status to Gallery Before Expiry</h3>
+                <p>Don't lose temporary media links or low-quality screenshots. Discover how to store status videos permanently in original quality completely offline.</p>
+            </div>
+            <a href="/how-to-save-whatsapp-status-before-expiry.html" class="blog-btn">Read Full Guide <i class="material-icons" style="font-size:16px;">arrow_forward</i></a>
+        </div>
+
+    </div>
 </section>
 
 <!-- TEAM -->
