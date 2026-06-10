@@ -261,6 +261,21 @@ footer {
     text-align: center;
     padding: 25px;
 }
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+    .blog-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .blog-card {
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+    }
+}
 </style>
 </head>
 
@@ -362,7 +377,8 @@ footer {
                 <h3>Find & Organize WhatsApp Study Notes on Android</h3>
                 <p>Buried in class PDFs and assignment notes? Learn how tutors and students can instantly isolate and clean document storage by date safely.</p>
             </div>
-            <a href="/how-to-find-whatsapp-documents-android.html" class="blog-btn">Read Full Guide <i class="material-icons" style="font-size:16px;">arrow_forward</i></a>
+            <!-- FIXED PATH: Looks inside the /blog/ folder subdirectory -->
+            <a href="/blog/how-to-find-whatsapp-documents-android.html" class="blog-btn">Read Full Guide <i class="material-icons" style="font-size:16px;">arrow_forward</i></a>
         </div>
 
         <!-- Card 2: Status Saving Guide -->
@@ -372,7 +388,8 @@ footer {
                 <h3>Save WhatsApp Status to Gallery Before Expiry</h3>
                 <p>Don't lose temporary media links or low-quality screenshots. Discover how to store status videos permanently in original quality completely offline.</p>
             </div>
-            <a href="/how-to-save-whatsapp-status-before-expiry.html" class="blog-btn">Read Full Guide <i class="material-icons" style="font-size:16px;">arrow_forward</i></a>
+            <!-- FIXED PATH: Looks inside the /blog/ folder subdirectory -->
+            <a href="/blog/how-to-save-whatsapp-status-before-expiry.html" class="blog-btn">Read Full Guide <i class="material-icons" style="font-size:16px;">arrow_forward</i></a>
         </div>
 
     </div>
@@ -430,3 +447,5 @@ footer {
 
 </body>
 </html>
+
+```
