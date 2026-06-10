@@ -6,12 +6,16 @@
 
   <title>WhatsClean – WhatsApp Cleaner, Status Saver & Private Viewer App</title>
 
-  <meta name="description" content="WhatsClean is a powerful WhatsApp cleaner and status saver app for Android. Clean WhatsApp media, save statuses, and view WhatsApp status privately without notification.">
-  <meta name="keywords" content="WhatsApp cleaner, WhatsApp media cleaner, WhatsApp status saver, save WhatsApp status, view WhatsApp status privately, WhatsApp storage cleaner, WhatsApp Business cleaner, Android WhatsApp cleaner app">
+  <meta name="description" content="WhatsClean is a powerful offline WhatsApp cleaner and status saver app for Android. Clear storage by date ranges, isolate buried files, and save statuses in high quality.">
+  <meta name="keywords" content="WhatsApp cleaner, WhatsApp media cleaner, WhatsApp status saver, save WhatsApp status, clean WhatsApp by date, find buried WhatsApp documents, view WhatsApp status privately, WhatsApp storage cleaner, WhatsApp Business cleaner, Android WhatsApp cleaner app">
   <meta name="author" content="SafeHearts">
 
   <link rel="canonical" href="https://safehearts.it.com/whatsclean/">
   <link rel="icon" href="/logo.png">
+
+  <!-- Inter Fonts & Icons matching the main landing page style -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <!-- Mobile App Schema -->
   <script type="application/ld+json">
@@ -46,28 +50,35 @@
       "name": "Is WhatsClean safe to use?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. WhatsClean works locally on your device and does not upload or collect personal data. You can preview files before deleting them."
+        "text": "Yes. WhatsClean works completely locally offline on your device and does not upload or collect personal data. You have complete visibility to preview files safely before removing them."
+      }
+    },{
+      "@type": "Question",
+      "name": "Can I clear WhatsApp media by specific date ranges?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. WhatsClean includes a robust Clean by Date feature allowing you to filter out stale cache files from months ago while protecting your recent data context completely."
+      }
+    },{
+      "@type": "Question",
+      "name": "Can WhatsClean recover or search out buried files?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. WhatsClean builds smart index lists to extract hidden or buried documents, invoices, and class study notes that get lost in crowded chat backup folders."
       }
     },{
       "@type": "Question",
       "name": "Can WhatsClean save WhatsApp status?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. WhatsClean allows you to save WhatsApp image and video statuses directly to your phone before they disappear."
+        "text": "Yes. WhatsClean allows you to save WhatsApp image and video statuses directly to your phone gallery before they expire."
       }
     },{
       "@type": "Question",
-      "name": "Can I view WhatsApp status privately?",
+      "name": "Does WhatsClean support WhatsApp Business?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. WhatsClean lets you view WhatsApp statuses without notifying the status uploader."
-      }
-    },{
-      "@type": "Question",
-      "name": "Does WhatsClean work with WhatsApp Business?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. WhatsClean supports both WhatsApp and WhatsApp Business media folders."
+        "text": "Yes. WhatsClean seamlessly supports both classic WhatsApp and WhatsApp Business media directories."
       }
     }]
   }
@@ -75,75 +86,149 @@
 
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f7f7f7;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #eef4ff, #f8fbff);
       color: #333;
       margin: 0;
       padding: 0;
       line-height: 1.7;
     }
     header {
-      background: #25D366;
+      background: linear-gradient(135deg, #004aad, #00a3ff);
       color: #fff;
-      padding: 30px 15px;
+      padding: 60px 20px;
       text-align: center;
     }
-    main {
-      max-width: 950px;
-      margin: 25px auto;
-      background: #fff;
-      padding: 28px;
-      border-radius: 12px;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    header h1 {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+      font-weight: 700;
     }
-    h1, h2, h3 {
-      color: #222;
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 14px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+    }
+    h2 {
+      color: #004aad;
+      font-size: 1.6rem;
+      margin-top: 35px;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #eef4ff;
+      padding-bottom: 6px;
+    }
+    h3 {
+      color: #004aad;
+      font-size: 1.2rem;
+      margin-top: 25px;
+      margin-bottom: 10px;
+    }
+    p {
+      color: #444;
+      font-size: 1rem;
+      margin-bottom: 20px;
     }
     ul {
-      padding-left: 22px;
+      padding-left: 20px;
+      margin-bottom: 25px;
+    }
+    li {
+      margin-bottom: 10px;
+      color: #444;
+    }
+    li strong {
+      color: #222;
     }
     a {
-      color: #25D366;
-      font-weight: bold;
+      color: #004aad;
+      font-weight: 600;
       text-decoration: none;
     }
     a:hover {
+      color: #00a3ff;
       text-decoration: underline;
     }
+    .center-box {
+      text-align: center;
+      margin: 30px 0;
+    }
     .cta {
-      display: inline-block;
-      margin: 18px 0;
-      padding: 14px 26px;
-      background: #25D366;
-      color: white;
-      border-radius: 7px;
-      font-size: 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 30px;
+      background: #004aad;
+      color: white !important;
+      border-radius: 30px;
+      font-size: 1.05rem;
+      font-weight: 500;
+      box-shadow: 0 4px 14px rgba(0, 74, 173, 0.25);
+      transition: 0.2s ease;
     }
     .cta:hover {
-      background: #1da851;
+      background: #00a3ff;
+      transform: translateY(-2px);
+      text-decoration: none !important;
     }
     .video-box {
-      margin: 20px 0;
+      margin: 30px 0;
       text-align: center;
     }
     iframe {
       width: 100%;
-      max-width: 720px;
-      height: 405px;
-      border-radius: 10px;
+      max-width: 640px;
+      height: 360px;
+      border-radius: 12px;
       border: none;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+    .faq {
+      background: #f8fbff;
+      padding: 25px;
+      border-radius: 12px;
+      margin-top: 35px;
+      border: 1px solid #eef4ff;
+    }
+    .faq h2 {
+      margin-top: 0;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .disclaimer {
+      font-size: 0.88rem;
+      color: #777;
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 40px;
     }
     footer {
       text-align: center;
       font-size: 14px;
-      padding: 22px;
+      padding: 30px 20px;
       color: #666;
+      border-top: 1px solid #eee;
+      background: #ffffff;
     }
-    .faq {
-      background: #f9f9f9;
-      padding: 18px;
-      border-radius: 10px;
-      margin-top: 20px;
+    footer a {
+      margin: 0 10px;
+    }
+
+    /* RESPONSIVE LAYOUT */
+    @media (max-width: 768px) {
+      header { padding: 40px 20px; }
+      header h1 { font-size: 1.8rem; }
+      main { padding: 25px; margin: 20px; }
+      iframe { height: 240px; }
     }
   </style>
 </head>
@@ -151,81 +236,83 @@
 <body>
 
 <header>
-  <h1>WhatsClean – WhatsApp Cleaner & Status Saver App</h1>
-  <p>Clean WhatsApp media • Save statuses • View privately</p>
+  <h1>WhatsClean – Media Cleaner & Status Saver</h1>
+  <p>Reclaim storage space by date • Uncover buried documents • Save statuses offline</p>
 </header>
 
 <main>
 
-  <h2>Best WhatsApp Cleaner for Android</h2>
+  <h2>The Smartest Way to Manage WhatsApp Storage</h2>
   <p>
-    WhatsApp automatically stores images, videos, audio, and documents on your phone.
-    Over time, this media fills your storage and slows down your device.
+    WhatsApp automatically stores incoming media files silently onto your device filesystem. Over time, heavy group videos, repeated forwards, and multi-page document attachments consume internal phone space, resulting in lag and performance drops.
   </p>
 
   <p>
-    <strong>WhatsClean</strong> is a smart WhatsApp media cleaner and status saver app
-    that helps you clean WhatsApp storage, save statuses, and manage files safely.
+    <strong>WhatsClean</strong> provides a privacy-first, powerful set of local management tools to clean WhatsApp storage, backup essential high-quality status media, and pinpoint buried data assets safely.
   </p>
 
   <h2>Why Choose WhatsClean?</h2>
   <ul>
-    <li>Powerful WhatsApp cleaner for Android</li>
-    <li>Save WhatsApp status in original quality</li>
-    <li>View WhatsApp status privately</li>
-    <li>Supports WhatsApp & WhatsApp Business</li>
-    <li>100% privacy – works offline</li>
+    <li><strong>100% Secure & Offline:</strong> Runs locally on your Android system using native Storage Access Frameworks. Your data never touches an external server.</li>
+    <li><strong>Advanced Date Filters:</strong> Target and wipe stale junk files from months ago while protecting your current active conversations.</li>
+    <li><strong>Document Isolation:</strong> Instantly inspect and isolate specific files, receipts, or study notes buried deep within media directory layers.</li>
+    <li><strong>Lossless Status Backups:</strong> Save temporary status updates permanently in original clarity completely undetected.</li>
+    <li><strong>Full Business Support:</strong> Easily toggle between WhatsApp and WhatsApp Business directory management paths.</li>
   </ul>
 
-  <h2>Key Features</h2>
+  <h2>Key Features Breakdown</h2>
   <ul>
-    <li><strong>WhatsApp Media Cleaner:</strong> Remove unwanted images, videos, audio & documents.</li>
-    <li><strong>WhatsApp Storage Cleaner:</strong> Identify large files and free space.</li>
-    <li><strong>Status Saver:</strong> Save WhatsApp statuses with one tap.</li>
-    <li><strong>Private Status Viewer:</strong> View statuses without notifying the uploader.</li>
-    <li><strong>Fast & Lightweight:</strong> Works smoothly even on low-end devices.</li>
+    <li><strong>Clean WhatsApp Media by Date:</strong> Prevent bulk deletion accidents by setting precise chronological date boundary rules.</li>
+    <li><strong>Deep-Buried Asset Recovery:</strong> Access organized, categorized file lists to pull out critical PDFs and audio sheets hidden inside chat cache loops.</li>
+    <li><strong>One-Tap Status Saver:</strong> Store video and image updates directly to your local system gallery before the 24-hour expiry threshold.</li>
+    <li><strong>Private Status Viewer:</strong> Read and browse shared status logs anonymously without generating view notifications for the original uploader.</li>
+    <li><strong>Lightweight Footprint:</strong> Zero background battery strain, completely ad-free layout, and optimized for low-end device architectures.</li>
   </ul>
 
-  <h2>Watch WhatsClean in Action</h2>
+  <h2>Watch WhatsClean In Action</h2>
   <div class="video-box">
-    <!-- Replace VIDEO_ID with your YouTube Shorts ID -->
     <iframe src="https://www.youtube.com/embed/USrNwdwp6Wg" allowfullscreen></iframe>
   </div>
 
-  <h2>Download WhatsClean</h2>
-  <a class="cta" href="https://play.google.com/store/apps/details?id=com.yourname.whatsappmediacleaner" target="_blank">
-    Download on Google Play
-  </a>
+  <h2>Take Control of Your Device Space</h2>
+  <div class="center-box">
+    <a class="cta" href="https://play.google.com/store/apps/details?id=com.yourname.whatsappmediacleaner" target="_blank">
+      <i class="material-icons">get_app</i> Download on Google Play
+    </a>
+  </div>
 
   <div class="faq">
     <h2>Frequently Asked Questions</h2>
 
-    <h3>Is WhatsClean safe?</h3>
-    <p>Yes. WhatsClean works locally on your phone and does not collect or upload any personal data.</p>
+    <h3>Is WhatsClean safe to use?</h3>
+    <p>Yes. WhatsClean performs operations entirely on-device. It requires no network permissions, guaranteeing that your personal media and file paths remain strictly confidential and private.</p>
 
-    <h3>Can I save WhatsApp status?</h3>
-    <p>Yes. You can save both image and video statuses directly to your device.</p>
+    <h3>How does cleaning by date protect my data?</h3>
+    <p>Unlike regular file clearers that wipe whole directories, WhatsClean allows you to specify a timeframe rule. For instance, you can delete clutter older than three months while preserving your recent business transactions and images safely.</p>
 
-    <h3>Can I view status privately?</h3>
-    <p>Yes. WhatsClean allows private status viewing without notifying the uploader.</p>
+    <h3>Can it find specific files lost in my chat folders?</h3>
+    <p>Yes. WhatsClean scans and tracks structural file types across hidden chat database locations, instantly lifting buried assignment PDFs, invoices, and documents so you can save or share them without scrolling history strings.</p>
 
-    <h3>Does it support WhatsApp Business?</h3>
-    <p>Yes. WhatsClean works with both WhatsApp and WhatsApp Business.</p>
+    <h3>Can I back up status videos privately?</h3>
+    <p>Yes. You can view, play, and download temporary video updates directly inside the app wrapper without letting the uploader know you have opened their status card.</p>
+
+    <h3>Does it work with WhatsApp Business?</h3>
+    <p>Yes. The app contains built-in cross-directory compatibility to let you manage your personal media storage folder and business data modules independently.</p>
   </div>
 
-  <h3>Disclaimer</h3>
-  <p>
-    WhatsClean is an independent utility app and is not affiliated with, endorsed by,
-    or connected to WhatsApp Inc.
-  </p>
+  <div class="disclaimer">
+    <strong>Disclaimer:</strong> WhatsClean is an independent utility application developed by SafeHearts. It is not officially connected to, endorsed by, or affiliated with WhatsApp LLC or Meta Platforms Inc.
+  </div>
 
 </main>
 
 <footer>
-  © 2026 SafeHearts |
-  <a href="https://safehearts.it.com/">Main Website</a> |
-  <a href="https://safehearts.it.com/privacy.html">Privacy Policy</a>
+  <p>
+    © 2026 SafeHearts Private Limited | 
+    <a href="/">Home</a> | 
+    <a href="/privacy.html">Privacy Policy</a>
+  </p>
 </footer>
 
 </body>
-    </html>
+</html>
