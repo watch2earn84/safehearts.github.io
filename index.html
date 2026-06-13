@@ -65,16 +65,17 @@
       -webkit-backdrop-filter: blur(12px);
       display: flex;
       justify-content: center;
+      align-items: center;
       gap: 10px;
       position: sticky;
       top: 0;
       z-index: 1000;
       border-bottom: 1px solid rgba(0, 74, 173, 0.08);
-      padding: 4px 0;
+      padding: 6px 16px;
     }
     .nav-link {
       color: var(--text-main);
-      padding: 14px 22px;
+      padding: 12px 18px;
       text-decoration: none;
       display: flex;
       align-items: center;
@@ -88,6 +89,55 @@
     .nav-link:hover {
       background: rgba(0, 74, 173, 0.06);
       color: var(--primary);
+    }
+
+    /* PREMIUM WHATSCLEAN NAV RATING BADGE */
+    .nav-app-badge {
+      display: inline-flex;
+      align-items: center;
+      background: #ffffff;
+      border: 1px solid rgba(0, 74, 173, 0.16);
+      border-radius: 30px;
+      padding: 4px 14px 4px 6px;
+      text-decoration: none;
+      transition: var(--transition);
+      box-shadow: 0 2px 10px rgba(0, 74, 173, 0.04);
+    }
+    .nav-app-badge:hover {
+      transform: translateY(-1px);
+      border-color: var(--primary);
+      box-shadow: 0 4px 12px rgba(0, 74, 173, 0.08);
+    }
+    .nav-app-badge .app-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--primary);
+      color: #ffffff;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+    .nav-app-badge:hover .app-btn {
+      background: var(--secondary);
+    }
+    .nav-app-badge .app-btn i {
+      font-size: 18px;
+    }
+    .nav-app-badge .rating-info {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding-left: 10px;
+      color: var(--dark);
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+    .nav-app-badge .rating-info .star-icon {
+      color: #ffca28; /* Google Play Gold */
+      font-size: 18px;
     }
 
     /* HERO SPLIT SECTION */
@@ -388,8 +438,11 @@
       header h1 { font-size: 2.3rem; }
       .statement-grid, .core-values, .blog-grid { grid-template-columns: 1fr; }
       .team-grid { grid-template-columns: repeat(2, 1fr); }
-      nav { padding: 8px; }
-      .nav-link { padding: 10px 14px; font-size: 0.88rem; }
+      nav { padding: 8px; flex-wrap: wrap; }
+      .nav-link { padding: 8px 12px; font-size: 0.88rem; }
+      .nav-app-badge { padding: 3px 10px 3px 4px; }
+      .nav-app-badge .app-btn { padding: 4px 10px; font-size: 0.82rem; }
+      .nav-app-badge .rating-info { font-size: 0.8rem; padding-left: 6px; }
       section { margin: 60px auto; }
     }
   </style>
@@ -403,10 +456,21 @@
     <div class="durood">اللَّهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَعَلَىٰ آلِ مُحَمَّدٍ</div>
   </div>
 
-  <!-- STICKY HEADER NAVIGATION -->
+  <!-- STICKY HEADER NAVIGATION WITH INTEGRATED SOCIAL PROOF BADGE -->
   <nav>
     <a href="/" class="nav-link"><i class="material-icons">home</i> Home</a>
-    <a href="/whatsclean/" class="nav-link"><i class="material-icons">apps</i> WhatsClean App</a>
+    
+    <!-- Premium WhatsClean Navigation Link + Social Proof Badge Combo -->
+    <a href="/whatsclean/" class="nav-app-badge">
+      <span class="app-btn">
+        <i class="material-icons">apps</i> WhatsClean App
+      </span>
+      <span class="rating-info">
+        <strong>4.8</strong>
+        <i class="material-icons star-icon">star</i>
+      </span>
+    </a>
+
     <a href="#blog" class="nav-link"><i class="material-icons">article</i> Blog Insights</a>
     <a href="/privacy.html" class="nav-link"><i class="material-icons">policy</i> Privacy Policy</a>
     <a href="#contact" class="nav-link"><i class="material-icons">contact_mail</i> Contact</a>
@@ -569,4 +633,5 @@
   </footer>
 
 </body>
-</html>
+  </html>
+  
