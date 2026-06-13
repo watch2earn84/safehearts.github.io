@@ -13,11 +13,9 @@
   <link rel="canonical" href="https://safehearts.it.com/whatsclean/">
   <link rel="icon" href="/logo.png">
 
-  <!-- Inter Fonts & Icons matching the main landing page style -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-  <!-- Mobile App Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -36,11 +34,15 @@
       "url": "https://safehearts.it.com"
     },
     "url": "https://safehearts.it.com/whatsclean/",
-    "downloadUrl": "https://play.google.com/store/apps/details?id=com.yourname.whatsappmediacleaner"
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.yourname.whatsappmediacleaner",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "1250"
+    }
   }
   </script>
 
-  <!-- FAQ Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -110,6 +112,42 @@
       max-width: 600px;
       margin: 0 auto;
     }
+    
+    /* Play Store Rating Widget Styles */
+    .rating-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      padding: 8px 18px;
+      border-radius: 50px;
+      margin-top: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #fff;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: background 0.2s ease;
+    }
+    .rating-badge:hover {
+      background: rgba(255, 255, 255, 0.22);
+      text-decoration: none !important;
+    }
+    .rating-badge .stars {
+      color: #ffca28; /* Classic Play Store Gold */
+      display: flex;
+      align-items: center;
+      gap: 1px;
+    }
+    .rating-badge .stars .material-icons {
+      font-size: 1.2rem;
+    }
+    .rating-badge .store-icon {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
     main {
       max-width: 900px;
       margin: 40px auto;
@@ -229,6 +267,7 @@
       header h1 { font-size: 1.8rem; }
       main { padding: 25px; margin: 20px; }
       iframe { height: 240px; }
+      .rating-badge { font-size: 0.88rem; padding: 6px 14px; }
     }
   </style>
 </head>
@@ -238,6 +277,18 @@
 <header>
   <h1>WhatsClean – Media Cleaner & Status Saver</h1>
   <p>Reclaim storage space by date • Uncover buried documents • Save statuses offline</p>
+  
+  <a class="rating-badge" href="https://play.google.com/store/apps/details?id=com.yourname.whatsappmediacleaner" target="_blank" rel="noopener">
+    <i class="material-icons store-icon">shop</i>
+    <span><strong>4.8</strong> Play Store Rating</span>
+    <span class="stars">
+      <i class="material-icons">star</i>
+      <i class="material-icons">star</i>
+      <i class="material-icons">star</i>
+      <i class="material-icons">star</i>
+      <i class="material-icons">star</i>
+    </span>
+  </a>
 </header>
 
 <main>
