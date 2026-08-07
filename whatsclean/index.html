@@ -16,73 +16,100 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+  <!-- Consolidated Structured Data (Schema.org JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "MobileApplication",
-    "name": "WhatsClean – WhatsApp Cleaner & Status Saver",
-    "operatingSystem": "Android",
-    "applicationCategory": "UtilitiesApplication",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "SafeHearts",
-      "url": "https://safehearts.it.com"
-    },
-    "url": "https://safehearts.it.com/whatsclean/",
-    "downloadUrl": "https://play.google.com/store/apps/details?id=com.yourname.whatsappmediacleaner",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "reviewCount": "1250"
-    }
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [{
-      "@type": "Question",
-      "name": "Is WhatsClean safe to use?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. WhatsClean works completely locally offline on your device and does not upload or collect personal data. You have complete visibility to preview files safely before removing them."
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://safehearts.it.com/whatsclean/#whatsclean",
+        "name": "WhatsClean",
+        "alternateName": "WhatsClean WhatsApp Cleaner & Status Saver", "Cleaner for WhatsApp",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android",
+        "description": "WhatsClean is a privacy-first, 100% offline WhatsApp storage cleaner and media manager for Android. Reclaim phone space by date range, find buried documents, and save statuses safely.",
+        "url": "https://safehearts.it.com/whatsclean/",
+        "downloadUrl": "https://play.google.com/store/apps/details?id=com.yourname.whatsappmediacleaner",
+        "featureList": [
+          "100% On-Device & Offline Processing",
+          "Clean WhatsApp Media by Date",
+          "Duplicate Photo and Video Detection",
+          "Deep-Buried Document Finder",
+          "WhatsApp Status Saver & Anonymous Viewer",
+          "WhatsApp Business Compatibility"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "reviewCount": "1250"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "@id": "https://safehearts.it.com/#organization",
+          "name": "SafeHearts",
+          "url": "https://safehearts.it.com"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://safehearts.it.com/#organization",
+        "name": "SafeHearts",
+        "url": "https://safehearts.it.com",
+        "logo": "https://safehearts.it.com/logo.png"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://safehearts.it.com/whatsclean/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is WhatsClean safe to use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. WhatsClean works completely locally offline on your device and does not upload or collect personal data. You have complete visibility to preview files safely before removing them."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I clear WhatsApp media by specific date ranges?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. WhatsClean includes a robust Clean by Date feature allowing you to filter out stale cache files from months ago while protecting your recent data context completely."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can WhatsClean recover or search out buried files?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. WhatsClean builds smart index lists to extract hidden or buried documents, invoices, and class study notes that get lost in crowded chat backup folders."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can WhatsClean save WhatsApp status?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. WhatsClean allows you to save WhatsApp image and video statuses directly to your phone gallery before they expire."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does WhatsClean support WhatsApp Business?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. WhatsClean seamlessly supports both classic WhatsApp and WhatsApp Business media directories."
+            }
+          }
+        ]
       }
-    },{
-      "@type": "Question",
-      "name": "Can I clear WhatsApp media by specific date ranges?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. WhatsClean includes a robust Clean by Date feature allowing you to filter out stale cache files from months ago while protecting your recent data context completely."
-      }
-    },{
-      "@type": "Question",
-      "name": "Can WhatsClean recover or search out buried files?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. WhatsClean builds smart index lists to extract hidden or buried documents, invoices, and class study notes that get lost in crowded chat backup folders."
-      }
-    },{
-      "@type": "Question",
-      "name": "Can WhatsClean save WhatsApp status?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. WhatsClean allows you to save WhatsApp image and video statuses directly to your phone gallery before they expire."
-      }
-    },{
-      "@type": "Question",
-      "name": "Does WhatsClean support WhatsApp Business?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. WhatsClean seamlessly supports both classic WhatsApp and WhatsApp Business media directories."
-      }
-    }]
+    ]
   }
   </script>
 
