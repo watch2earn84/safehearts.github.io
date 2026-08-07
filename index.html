@@ -265,7 +265,7 @@
     /* LATEST ARTICLES & INSIGHTS GRID */
     .blog-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 30px;
     }
     .blog-card {
@@ -430,7 +430,7 @@
 
     /* RESPONSIVE BREAKPOINTS */
     @media (max-width: 1024px) {
-      .core-values, .blog-grid { grid-template-columns: repeat(2, 1fr); }
+      .core-values { grid-template-columns: repeat(2, 1fr); }
       .team-grid { grid-template-columns: repeat(3, 1fr); }
       .member.featured { transform: none; }
     }
@@ -537,7 +537,17 @@
     <p class="section-subtitle">Actionable performance optimization walkthroughs and operational maintenance practices.</p>
     
     <div class="blog-grid">
-      <!-- Article 1: Storage Optimization Guide -->
+      <!-- Article 1: Best WhatsApp Cleaner App Comparison -->
+      <div class="blog-card">
+        <div>
+          <span class="blog-tag">App Review</span>
+          <h3>Best WhatsApp Cleaner for Android (2026)</h3>
+          <p>Discover why WhatsClean outperforms traditional storage apps with offline privacy, smart date filters, deep document recovery, and status saving.</p>
+        </div>
+        <a href="/blog/best-whatsapp-cleaner-android.html" class="blog-btn">Read Full Review <i class="material-icons">arrow_forward</i></a>
+      </div>
+
+      <!-- Article 2: Storage Optimization Guide -->
       <div class="blog-card">
         <div>
           <span class="blog-tag">Storage Optimization</span>
@@ -547,7 +557,7 @@
         <a href="/blog/how-to-clean-whatsapp-storage-android.html" class="blog-btn">Read Full Guide <i class="material-icons">arrow_forward</i></a>
       </div>
 
-      <!-- Article 2: Educational Asset Location -->
+      <!-- Article 3: Educational Asset Location -->
       <div class="blog-card">
         <div>
           <span class="blog-tag">Storage Optimization</span>
@@ -557,7 +567,7 @@
         <a href="/blog/how-to-find-whatsapp-documents-android.html" class="blog-btn">Read Full Guide <i class="material-icons">arrow_forward</i></a>
       </div>
 
-      <!-- Article 3: High Fidelity Media Storage -->
+      <!-- Article 4: High Fidelity Media Storage -->
       <div class="blog-card">
         <div>
           <span class="blog-tag">Media Utilities</span>
@@ -633,5 +643,4 @@
   </footer>
 
 </body>
-  </html>
-  
+</html>
