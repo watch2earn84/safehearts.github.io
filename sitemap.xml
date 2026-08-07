@@ -1,40 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- 1. Main Company Landing Page -->
+  <url>
+    <loc>https://safehearts.it.com/</loc>
+    <priority>1.00</priority>
+  </url>
 
-    <!-- 1. Main Company Landing Page -->
-    <url>
-        <loc>https://safehearts.it.com/</loc>
-        <priority>1.00</priority>
-    </url>
+  <!-- 2. WhatsClean App Dedicated Landing Page -->
+  <url>
+    <loc>https://safehearts.it.com/whatsclean/</loc>
+    <priority>0.90</priority>
+  </url>
 
-    <!-- 2. WhatsClean App Dedicated Landing Page (Fixed to lowercase) -->
-    <url>
-        <loc>https://safehearts.it.com/whatsclean/</loc>
-        <priority>0.90</priority>
-    </url>
+  <!-- 3. NEW REVIEW ARTICLE: Best WhatsApp Cleaner -->
+  <url>
+    <loc>https://safehearts.it.com/blog/best-whatsapp-cleaner-android.html</loc>
+    <priority>0.80</priority>
+  </url>
 
-    <!-- 3. Article 1: Main Storage Cleanup Guide (Updated file name) -->
-    <url>
-        <loc>https://safehearts.it.com/blog/how-to-clean-whatsapp-storage-android.html</loc>
-        <priority>0.80</priority>
-    </url>
+  <!-- 4. Article: Storage Cleanup Guide -->
+  <url>
+    <loc>https://safehearts.it.com/blog/how-to-clean-whatsapp-storage-android.html</loc>
+    <priority>0.80</priority>
+  </url>
 
-    <!-- 4. Article 2: Study Notes Guide -->
-    <url>
-        <loc>https://safehearts.it.com/blog/how-to-find-whatsapp-documents-android.html</loc>
-        <priority>0.80</priority>
-    </url>
+  <!-- 5. Article: Study Notes Guide -->
+  <url>
+    <loc>https://safehearts.it.com/blog/how-to-find-whatsapp-documents-android.html</loc>
+    <priority>0.80</priority>
+  </url>
 
-    <!-- 5. Article 3: Status Saver Guide -->
-    <url>
-        <loc>https://safehearts.it.com/blog/how-to-save-whatsapp-status-before-expiry.html</loc>
-        <priority>0.80</priority>
-    </url>
+  <!-- 6. Article: Status Saver Guide -->
+  <url>
+    <loc>https://safehearts.it.com/blog/how-to-save-whatsapp-status-before-expiry.html</loc>
+    <priority>0.80</priority>
+  </url>
 
-    <!-- 6. Privacy Policy -->
-    <url>
-        <loc>https://safehearts.it.com/privacy.html</loc>
-        <priority>0.50</priority>
-    </url>
-
+  <!-- 7. Privacy Policy -->
+  <url>
+    <loc>https://safehearts.it.com/privacy.html</loc>
+    <priority>0.50</priority>
+  </url>
 </urlset>
