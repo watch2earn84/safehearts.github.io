@@ -265,7 +265,7 @@
     /* LATEST ARTICLES & INSIGHTS GRID */
     .blog-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 30px;
     }
     .blog-card {
@@ -436,7 +436,7 @@
     }
     @media (max-width: 768px) {
       header h1 { font-size: 2.3rem; }
-      .statement-grid, .core-values, .blog-grid { grid-template-columns: 1fr; }
+      .statement-grid, .core-values { grid-template-columns: 1fr; }
       .team-grid { grid-template-columns: repeat(2, 1fr); }
       nav { padding: 8px; flex-wrap: wrap; }
       .nav-link { padding: 8px 12px; font-size: 0.88rem; }
@@ -575,6 +575,16 @@
           <p>Don't lose temporary media links or low-quality screenshots. Discover how to store status videos permanently in original quality completely offline.</p>
         </div>
         <a href="/blog/how-to-save-whatsapp-status-before-expiry.html" class="blog-btn">Read Full Guide <i class="material-icons">arrow_forward</i></a>
+      </div>
+
+      <!-- Article 5: Data Security & Privacy Guidelines -->
+      <div class="blog-card">
+        <div>
+          <span class="blog-tag">Privacy &amp; Security</span>
+          <h3>Protecting Media Privacy During Local Storage Cleans</h3>
+          <p>Learn how local, on-device cleaning architectures protect personal photos and documents from unauthorized cloud access and external data leaks.</p>
+        </div>
+        <a href="/blog/protecting-media-privacy-android.html" class="blog-btn">Read Full Guide <i class="material-icons">arrow_forward</i></a>
       </div>
     </div>
   </section>
