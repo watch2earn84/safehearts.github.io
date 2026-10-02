@@ -1,252 +1,828 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex, nofollow">
-  <title>Pamir Cooperative Utility Society Hydropower (PCUS)</title>
-  <style>
-    :root {
-      --primary: #0284c7;
-      --primary-dark: #0369a1;
-      --secondary: #0d9488;
-      --bg: #f8fafc;
-      --card-bg: #ffffff;
-      --text: #0f172a;
-      --text-muted: #475569;
-      --border: #e2e8f0;
-      --radius: 12px;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Pamir Cooperative Utility Society Hydropower - 500 kW Mogh Project</title>
+    
+    <style>
+        /* CSS Variables for Consistent Branding */
+        :root {
+            --primary: #0284c7;       /* Hydro Light Blue */
+            --primary-dark: #0369a1;  /* Hydro Deep Blue */
+            --emerald: #059669;      /* Clean Energy Emerald */
+            --emerald-dark: #047857; /* Dark Emerald */
+            --slate-900: #0f172a;    /* Hero / Footer Dark Slate */
+            --slate-800: #1e293b;    /* Dark Card Accent */
+            --slate-100: #f1f5f9;    /* Light Gray Background */
+            --slate-50: #f8fafc;     /* Card White Overlay */
+            --text-dark: #334155;    /* Body Dark Text */
+            --text-muted: #64748b;   /* Muted Text */
+            --white: #ffffff;
+            --radius-lg: 16px;
+            --radius-md: 10px;
+            --radius-sm: 6px;
+            --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.12), 0 8px 10px -6px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+        /* Base Resets */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      padding: 0;
-      margin: 0;
-    }
+        body {
+            background-color: var(--slate-100);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-    header {
-      background: white;
-      border-bottom: 1px solid var(--border);
-      padding: 1rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-    }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-    .brand img {
-      height: 48px;
-      width: auto;
-      object-fit: contain;
-    }
+        /* Utility Badges & Typography */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+        }
 
-    .logo-fallback {
-      height: 48px;
-      width: 48px;
-      background: var(--primary);
-      color: white;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 8px;
-      font-size: 1.2rem;
-    }
+        .badge-emerald {
+            background-color: rgba(5, 150, 105, 0.12);
+            color: var(--emerald-dark);
+            border: 1px solid rgba(5, 150, 105, 0.25);
+        }
 
-    .brand-text h1 {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--text);
-    }
+        .badge-blue {
+            background-color: rgba(2, 132, 199, 0.12);
+            color: var(--primary-dark);
+            border: 1px solid rgba(2, 132, 199, 0.25);
+        }
 
-    .brand-text p {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--emerald);
+            border-radius: 50%;
+            box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.7);
+            animation: pulse 1.8s infinite;
+        }
 
-    .container {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 0 1.5rem;
-    }
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(5, 150, 105, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(5, 150, 105, 0); }
+        }
 
-    .hero {
-      background: linear-gradient(135deg, #0284c7 0%, #0d9488 100%);
-      color: white;
-      padding: 3rem 2rem;
-      border-radius: var(--radius);
-      margin-bottom: 2rem;
-      text-align: center;
-    }
+        /* Header / Navbar */
+        header {
+            background-color: var(--white);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
 
-    .hero h2 {
-      font-size: 2rem;
-      margin-bottom: 0.75rem;
-    }
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
 
-    .hero p {
-      font-size: 1.1rem;
-      opacity: 0.95;
-      max-width: 650px;
-      margin: 0 auto;
-    }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
 
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-bottom: 2rem;
-    }
+        .logo-img-wrapper {
+            width: 52px;
+            height: 52px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--emerald) 100%);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(2, 132, 199, 0.2);
+            border: 2px solid var(--white);
+        }
 
-    .card {
-      background: var(--card-bg);
-      padding: 1.5rem;
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-    }
+        .logo-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-    .card h3 {
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--text-muted);
-      margin-bottom: 0.5rem;
-    }
+        .logo-fallback-text {
+            color: var(--white);
+            font-weight: 800;
+            font-size: 1.2rem;
+        }
 
-    .card .value {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--primary-dark);
-    }
+        .brand-titles {
+            display: flex;
+            flex-direction: column;
+        }
 
-    .app-section {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 2rem;
-      margin-bottom: 2rem;
-    }
+        .brand-name {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--slate-900);
+            line-height: 1.2;
+        }
 
-    .app-section h3 {
-      font-size: 1.3rem;
-      margin-bottom: 1rem;
-      color: var(--text);
-    }
+        .brand-sub {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
 
-    .btn-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--slate-900) 0%, #0c2136 100%);
+            color: var(--white);
+            padding: 80px 0 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--primary);
-      color: white;
-      text-decoration: none;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-      font-weight: 600;
-      transition: background 0.2s ease;
-    }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(2, 132, 199, 0.15) 0%, rgba(0,0,0,0) 70%);
+            border-radius: 50%;
+        }
 
-    .btn:hover {
-      background: var(--primary-dark);
-    }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 50px;
+            align-items: center;
+        }
 
-    .btn-secondary {
-      background: #f1f5f9;
-      color: var(--text);
-      border: 1px solid var(--border);
-    }
+        .hero-title {
+            font-size: 2.75rem;
+            font-weight: 800;
+            line-height: 1.25;
+            margin: 20px 0;
+            background: linear-gradient(to right, #ffffff, #93c5fd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-    .btn-secondary:hover {
-      background: #e2e8f0;
-    }
+        .hero-description {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            margin-bottom: 30px;
+            line-height: 1.7;
+        }
 
-    footer {
-      text-align: center;
-      padding: 2rem 0;
-      font-size: 0.875rem;
-      color: var(--text-muted);
-      border-top: 1px solid var(--border);
-      margin-top: 3rem;
-    }
-  </style>
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 28px;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--emerald) 0%, var(--emerald-dark) 100%);
+            color: var(--white);
+            box-shadow: 0 4px 14px rgba(5, 150, 105, 0.35);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(5, 150, 105, 0.5);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--white);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Preview Card */
+        .hero-preview-card {
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            border-radius: var(--radius-lg);
+            padding: 30px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .card-header-status {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: #34d399;
+            font-weight: 600;
+        }
+
+        .metric-display {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .metric-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(15, 23, 42, 0.6);
+            padding: 14px 18px;
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .metric-label {
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        .metric-value {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--white);
+        }
+
+        /* Key Statistics Bar */
+        .stats-section {
+            margin-top: -50px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .stat-card {
+            background-color: var(--white);
+            padding: 26px 20px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            border: 1px solid #e2e8f0;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary-dark);
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Section Layouts */
+        .section {
+            padding: 90px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px auto;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            color: var(--slate-900);
+            font-weight: 800;
+            margin: 12px 0;
+            line-height: 1.3;
+        }
+
+        .section-subtitle {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 32px 26px;
+            border-radius: var(--radius-lg);
+            border: 1px solid #e2e8f0;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-4px);
+        }
+
+        .feature-icon {
+            width: 54px;
+            height: 54px;
+            background-color: rgba(2, 132, 199, 0.1);
+            color: var(--primary);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 22px;
+        }
+
+        .feature-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--slate-900);
+            margin-bottom: 10px;
+        }
+
+        .feature-text {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Technical Specs Card Grid */
+        .specs-bg {
+            background-color: #f1f5f9;
+            border-top: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .spec-item {
+            background-color: var(--white);
+            padding: 24px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .spec-badge {
+            width: 48px;
+            height: 48px;
+            background-color: rgba(5, 150, 105, 0.1);
+            color: var(--emerald-dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .spec-details h4 {
+            font-size: 1.05rem;
+            color: var(--slate-900);
+            margin-bottom: 2px;
+        }
+
+        .spec-details p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* App Download Banner */
+        .download-banner {
+            background: linear-gradient(135deg, var(--emerald-dark) 0%, #064e3b 100%);
+            border-radius: var(--radius-lg);
+            padding: 60px;
+            color: var(--white);
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .download-banner h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        .download-banner p {
+            font-size: 1.1rem;
+            color: #a7f3d0;
+            max-width: 650px;
+            margin: 0 auto 36px auto;
+        }
+
+        .download-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--slate-900);
+            color: #94a3b8;
+            padding: 60px 0 30px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .footer-brand h3 {
+            color: var(--white);
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            max-width: 400px;
+        }
+
+        .footer-title {
+            color: var(--white);
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 30px;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .specs-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            .download-banner {
+                padding: 40px 20px;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <header>
-    <div class="brand">
-      <!-- Upload your logo as logo.png in the same directory -->
-      <img src="logo.png" alt="PCUS Logo" onerror="this.style.display='none'; document.getElementById('fallback').style.display='flex';">
-      <div id="fallback" class="logo-fallback" style="display: none;">PCUS</div>
-      <div class="brand-text">
-        <h1>Pamir Cooperative Utility Society</h1>
-        <p>Hydropower Project Portal</p>
-      </div>
-    </div>
-  </header>
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo-container">
+                <!-- Replace 'logo.png' with your logo file path if customized -->
+                <div class="logo-img-wrapper">
+                    <img src="logo.png" alt="PCUS Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <span class="logo-fallback-text" style="display:none;">PCUS</span>
+                </div>
+                <div class="brand-titles">
+                    <span class="brand-name">Pamir Cooperative Utility Society</span>
+                    <span class="brand-sub">Hydropower Division • Mogh Garamchashma</span>
+                </div>
+            </div>
+            <div>
+                <span class="badge badge-emerald">
+                    <span class="pulse-dot"></span> Grid Active
+                </span>
+            </div>
+        </div>
+    </header>
 
-  <div class="container">
     <section class="hero">
-      <h2>Mogh Garamchashma Hydropower Project</h2>
-      <p>Providing sustainable and local clean energy generation in Chitral.</p>
+        <div class="container hero-grid">
+            <div>
+                <span class="badge badge-blue">Chitral Clean Energy Project</span>
+                <h1 class="hero-title">500 kW Hydropower Project</h1>
+                <p class="hero-description">
+                    Empowering Mogh, Garamchashma, and the surrounding Chitral Valley with reliable, clean hydro electricity. Access live telemetry, consumption tracking, and utility service controls through our client portal.
+                </p>
+                <div class="hero-actions">
+                    <a href="#app-download" class="btn btn-primary">
+                        ⚡ Download Utility App
+                    </a>
+                    <a href="#telemetry" class="btn btn-secondary">
+                        📊 Live Grid Telemetry
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-preview-card" id="telemetry">
+                <div class="card-header-status">
+                    <div>
+                        <h3 style="font-size: 1.1rem; color: #fff;">Live Generation Status</h3>
+                        <p style="font-size: 0.8rem; color: #94a3b8;">Plant ID: PCUS-MOGH-01</p>
+                    </div>
+                    <span class="status-indicator">
+                        ● Generating
+                    </span>
+                </div>
+                <div class="metric-display">
+                    <div class="metric-row">
+                        <span class="metric-label">Installed Capacity</span>
+                        <span class="metric-value">500 kW</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-label">Current Output</span>
+                        <span class="metric-value" style="color: #38bdf8;">412 kW</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-label">Frequency / Voltage</span>
+                        <span class="metric-value">50.1 Hz / 400V</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-label">Location</span>
+                        <span class="metric-value">Mogh, Garamchashma</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="stats-grid">
-      <div class="card">
-        <h3>Power Generation Capacity</h3>
-        <div class="value">500 kW</div>
-      </div>
-      <div class="card">
-        <h3>Project Location</h3>
-        <div class="value">Mogh, Garam Chashma</div>
-        <p style="font-size: 0.9rem; color: var(--text-muted);">District Chitral, Khyber Pakhtunkhwa</p>
-      </div>
-      <div class="card">
-        <h3>Society / Operator</h3>
-        <div class="value">PCUS Hydropower</div>
-      </div>
+    <div class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">500 kW</div>
+                    <div class="stat-label">Hydel Capacity</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Valley Supply</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Clean Hydro Power</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">Mogh</div>
+                    <div class="stat-label">Garamchashma Chitral</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-emerald">Mobile Utility App</span>
+                <h2 class="section-title">Hydel Monitoring & Smart Utility Access</h2>
+                <p class="section-subtitle">
+                    The official mobile client application enables consumers and engineers to monitor plant operation, bill history, and local distribution efficiency.
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">Generation Telemetry</h3>
+                    <p class="feature-text">
+                        Real-time visualization of turbine output, grid load balancing, and active water flow rate monitoring from Mogh intake.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📑</div>
+                    <h3 class="feature-title">Meter & Billing Management</h3>
+                    <p class="feature-text">
+                        Track domestic and commercial electricity bills, payment records, and smart meter consumption logs directly from your phone.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3 class="feature-title">Grid Outage & Service Alerts</h3>
+                    <p class="feature-text">
+                        Receive instant push notifications regarding scheduled maintenance, emergency line repairs, and weather updates in Chitral.
+                    </p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="app-section">
-      <h3>Mobile App Testing & Distribution</h3>
-      <p>Access the latest test builds for the Pamir Cooperative Hydel Monitoring and Utility Application below.</p>
+    <section class="section specs-bg">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-blue">Project Specifications</span>
+                <h2 class="section-title">Technical Overview</h2>
+                <p class="section-subtitle">
+                    Comprehensive details for the Pamir Cooperative Utility Society Mogh Hydropower Scheme.
+                </p>
+            </div>
 
-      <div class="btn-group">
-        <a href="#" class="btn">
-          <span>Download Android APK</span>
-        </a>
-        <a href="#" class="btn btn-secondary">
-          <span>Internal Testing Portal</span>
-        </a>
-      </div>
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <div class="spec-badge">01</div>
+                    <div class="spec-details">
+                        <h4>Power Output</h4>
+                        <p>500 kW / 625 kVA Rated Generation Capacity</p>
+                    </div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-badge">02</div>
+                    <div class="spec-details">
+                        <h4>Geographic Location</h4>
+                        <p>Mogh, Garamchashma, District Chitral, Khyber Pakhtunkhwa</p>
+                    </div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-badge">03</div>
+                    <div class="spec-details">
+                        <h4>Operating Authority</h4>
+                        <p>Pamir Cooperative Utility Society (PCUS) Hydropower Division</p>
+                    </div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-badge">04</div>
+                    <div class="spec-details">
+                        <h4>Monitoring System</h4>
+                        <p>Integrated Smart App & Automated Distribution Telemetry</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-  </div>
 
-  <footer>
-    <p>&copy; Pamir Cooperative Utility Society Hydropower (PCUS). All rights reserved.</p>
-  </footer>
+    <section class="section" id="app-download">
+        <div class="container">
+            <div class="download-banner">
+                <h2>Download PCUS Hydel Client App</h2>
+                <p>
+                    Get instant access to your power connection, real-time load status, and account management tools on Android and iOS devices.
+                </p>
+                <div class="download-buttons">
+                    <a href="#" class="btn btn-primary" onclick="alert('Client App Build (APK) download link active for internal testers.'); return false;">
+                        📲 Download Android APK
+                    </a>
+                    <a href="#" class="btn btn-secondary" onclick="alert('Web Portal access is open for internal PCUS engineers.'); return false;">
+                        🌐 Web Portal Login
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Pamir Cooperative Utility Society</h3>
+                    <p>
+                        Delivering sustainable, community-driven hydroelectric power to Mogh, Garamchashma, and the greater Chitral region.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#telemetry">Generation Status</a></li>
+                        <li><a href="#app-download">Download App</a></li>
+                        <li><a href="#">Support Portal</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Location</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6;">
+                        Mogh Hydro Plant,<br>
+                        Garamchashma Valley,<br>
+                        District Chitral, KP, Pakistan
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; Pamir Cooperative Utility Society Hydropower. All rights reserved.</p>
+                <p>Temporary Staging Portal • SafeHearts Network</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
