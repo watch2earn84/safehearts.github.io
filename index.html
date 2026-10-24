@@ -196,6 +196,141 @@
       font-size: 1.05rem;
     }
 
+    /* CNET FEATURED REVIEW CARD */
+    .cnet-review-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0, 74, 173, 0.08);
+      border: 1px solid rgba(0, 74, 173, 0.12);
+      position: relative;
+      overflow: hidden;
+    }
+    .cnet-review-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 6px;
+      height: 100%;
+      background: linear-gradient(180deg, #d32f2f, #ff5252);
+    }
+    .cnet-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid #f0f4f8;
+      padding-bottom: 20px;
+    }
+    .cnet-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .cnet-logo-badge {
+      background: #d32f2f;
+      color: #ffffff;
+      font-weight: 900;
+      font-size: 1.25rem;
+      padding: 6px 14px;
+      border-radius: 6px;
+      letter-spacing: 1px;
+    }
+    .cnet-meta {
+      display: flex;
+      flex-direction: column;
+    }
+    .cnet-meta .source-name {
+      font-weight: 700;
+      color: var(--dark);
+      font-size: 1.1rem;
+    }
+    .cnet-meta .audience-tag {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    .cnet-verdict-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #e8f5e9;
+      color: #2e7d32;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 6px 16px;
+      border-radius: 20px;
+      border: 1px solid #c8e6c9;
+    }
+    .cnet-quote-box {
+      background: #f8fafc;
+      border-left: 4px solid var(--secondary);
+      padding: 24px;
+      border-radius: 8px;
+      margin-bottom: 24px;
+    }
+    .cnet-quote-box blockquote {
+      font-size: 1.1rem;
+      color: #1e293b;
+      font-style: italic;
+      line-height: 1.7;
+    }
+    .cnet-highlights {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .cnet-pill {
+      background: #f0f6ff;
+      padding: 12px 16px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .cnet-pill i {
+      font-size: 18px;
+      color: var(--secondary);
+    }
+    .cnet-action-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .cnet-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #d32f2f;
+      color: #ffffff;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+      box-shadow: 0 4px 14px rgba(211, 47, 47, 0.25);
+    }
+    .cnet-btn:hover {
+      background: #b71c1c;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(211, 47, 47, 0.35);
+    }
+    .cnet-verified {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
     /* CORPORATE INTRO & STATEMENT PANELS */
     .statement-grid {
       display: grid;
@@ -433,6 +568,7 @@
       .core-values { grid-template-columns: repeat(2, 1fr); }
       .team-grid { grid-template-columns: repeat(3, 1fr); }
       .member.featured { transform: none; }
+      .cnet-highlights { grid-template-columns: 1fr; }
     }
     @media (max-width: 768px) {
       header h1 { font-size: 2.3rem; }
@@ -444,6 +580,8 @@
       .nav-app-badge .app-btn { padding: 4px 10px; font-size: 0.82rem; }
       .nav-app-badge .rating-info { font-size: 0.8rem; padding-left: 6px; }
       section { margin: 60px auto; }
+      .cnet-review-card { padding: 24px; }
+      .cnet-action-bar { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
@@ -482,6 +620,51 @@
     <h1>SafeHearts</h1>
     <p>We build privacy-first apps that protect users, strengthen connections, and solve real-world problems.</p>
   </header>
+
+  <!-- CNET EDITORIAL RECOGNITION SECTION -->
+  <section id="editorial-review">
+    <div class="cnet-review-card">
+      <div class="cnet-header">
+        <div class="cnet-brand">
+          <span class="cnet-logo-badge">CNET</span>
+          <div class="cnet-meta">
+            <span class="source-name">Download.com Staff Review</span>
+            <span class="audience-tag">Trusted global tech authority</span>
+          </div>
+        </div>
+        <div class="cnet-verdict-badge">
+          <i class="material-icons">verified</i> Editors' Choice: Recommended
+        </div>
+      </div>
+
+      <div class="cnet-quote-box">
+        <blockquote>
+          “WhatsClean is a pragmatic option for Android users who need targeted removal of messaging media while keeping processing local to the device... On-device processing preserves privacy with no external uploads.”
+        </blockquote>
+      </div>
+
+      <div class="cnet-highlights">
+        <div class="cnet-pill">
+          <i class="material-icons">lock</i> 100% Offline & Private
+        </div>
+        <div class="cnet-pill">
+          <i class="material-icons">tune</i> Granular Control
+        </div>
+        <div class="cnet-pill">
+          <i class="material-icons">speed</i> Lightweight Footprint
+        </div>
+      </div>
+
+      <div class="cnet-action-bar">
+        <a href="https://download.cnet.com/whatsclean-whatsapp-cleaner/3000-android-whatsclean-whatsapp-cleaner-1.html" target="_blank" rel="noopener noreferrer" class="cnet-btn">
+          Read Full CNET Review <i class="material-icons">open_in_new</i>
+        </a>
+        <div class="cnet-verified">
+          <i class="material-icons" style="color: #2e7d32; font-size: 18px;">check_circle</i> Verified Independent Editorial Review
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- CORPORATE PROFILE STATEMENTS -->
   <section>
