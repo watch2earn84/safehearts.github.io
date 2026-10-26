@@ -622,51 +622,351 @@
     <p>We build privacy-first apps that protect users, strengthen connections, and solve real-world problems.</p>
   </header>
 
-  <!-- CNET EDITORIAL RECOGNITION SECTION -->
-  <section id="editorial-review">
-    <div class="cnet-review-card">
-      <div class="cnet-header">
-        <div class="cnet-brand">
-          <span class="cnet-logo-badge">CNET</span>
-          <div class="cnet-meta">
-            <span class="source-name">Download.com Staff Review</span>
-            <span class="audience-tag">Trusted global tech authority</span>
-          </div>
-        </div>
-        <div class="cnet-verdict-badge">
-          <i class="material-icons">verified</i> Editors' Choice: Recommended
+ <!-- Optional fonts for enhanced editorial typography -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- CNET DOWNLOAD EDITORS' REVIEW SECTION -->
+<style>
+  #editorial-review {
+    --er-primary: #004aad;
+    --er-secondary: #00a3ff;
+    --er-dark: #0f172a;
+    --er-cnet-red: #d32f2f;
+    --er-sun: #ffc93c;
+    --er-paper: #ffffff;
+    --er-bg-tint: rgba(0, 74, 173, 0.04);
+    
+    padding: 80px 24px;
+    background: 
+      radial-gradient(900px 400px at 85% -10%, rgba(0, 163, 255, 0.12), transparent 60%),
+      radial-gradient(700px 360px at 0% 110%, rgba(0, 74, 173, 0.08), transparent 60%),
+      #f0f6ff;
+    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--text-main, #374151);
+    box-sizing: border-box;
+  }
+  
+  #editorial-review * { box-sizing: border-box; }
+
+  .er-card {
+    position: relative;
+    max-width: 980px;
+    margin: 0 auto;
+    background: var(--er-paper);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 74, 173, 0.08), 0 0 0 1px rgba(0, 74, 173, 0.08);
+  }
+
+  .er-top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 32px;
+    background: linear-gradient(135deg, var(--er-primary), #002f75);
+    color: #ffffff;
+  }
+
+  .er-source {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .er-cnet-badge {
+    background: var(--er-cnet-red);
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 1.1rem;
+    padding: 4px 10px;
+    border-radius: 6px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+
+  .er-source-meta {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .er-source-meta span {
+    font-weight: 700;
+    font-size: 1.05rem;
+    line-height: 1.2;
+  }
+
+  .er-source-meta small {
+    font-weight: 400;
+    font-size: 0.8rem;
+    opacity: 0.85;
+    margin-top: 2px;
+  }
+
+  .er-rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+  }
+
+  .er-stars {
+    color: var(--er-sun);
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+    line-height: 1;
+  }
+
+  .er-rating span.er-label {
+    font-size: 0.85rem;
+    opacity: 0.9;
+    font-weight: 500;
+  }
+
+  .er-body {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 0;
+    position: relative;
+  }
+
+  .er-quote {
+    position: relative;
+    padding: 44px 36px 40px 40px;
+  }
+
+  .er-quote::before {
+    content: "\201C";
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 700;
+    font-size: 8.5rem;
+    line-height: 1;
+    color: rgba(0, 74, 173, 0.08);
+    pointer-events: none;
+  }
+
+  .er-quote blockquote {
+    position: relative;
+    margin: 0;
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(1.25rem, 2.4vw, 1.65rem);
+    line-height: 1.4;
+    color: var(--er-dark);
+  }
+
+  .er-cite {
+    position: relative;
+    margin-top: 18px;
+    font-size: 0.9rem;
+    color: #64748b;
+  }
+
+  .er-cite b {
+    color: var(--er-primary);
+  }
+
+  .er-seal {
+    position: absolute;
+    top: -24px;
+    right: 28px;
+    width: 108px;
+    height: 108px;
+    border-radius: 50%;
+    background: var(--er-sun);
+    color: var(--er-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transform: rotate(8deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), inset 0 0 0 4px rgba(255, 255, 255, 0.6), inset 0 0 0 6px var(--er-dark);
+    font-weight: 700;
+    line-height: 1.1;
+    z-index: 2;
+  }
+
+  .er-seal .material-icons {
+    font-size: 26px;
+    color: var(--er-dark);
+  }
+
+  .er-seal span {
+    font-size: 0.9rem;
+    margin-top: 1px;
+  }
+
+  .er-seal small {
+    font-size: 0.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+  }
+
+  .er-likes {
+    padding: 40px 32px 36px 16px;
+    display: grid;
+    gap: 12px;
+    align-content: center;
+  }
+
+  .er-likes h3 {
+    margin: 0 0 4px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--er-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .er-like {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 12px 14px;
+    border-radius: 14px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #334155;
+  }
+
+  .er-like .material-icons {
+    flex: none;
+    color: #ffffff;
+    background: var(--er-secondary);
+    border-radius: 8px;
+    padding: 4px;
+    font-size: 18px;
+  }
+
+  .er-foot {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 32px 24px;
+    border-top: 1px dashed #e2e8f0;
+    background: #fafcff;
+  }
+
+  .er-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 30px;
+    background: var(--er-primary);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.92rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(0, 74, 173, 0.2);
+  }
+
+  .er-btn:hover {
+    background: var(--er-secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 163, 255, 0.3);
+  }
+
+  .er-btn:focus-visible {
+    outline: 3px solid var(--er-sun);
+    outline-offset: 3px;
+  }
+
+  .er-note {
+    max-width: 440px;
+    font-size: 0.78rem;
+    line-height: 1.5;
+    color: #64748b;
+  }
+
+  @media (max-width: 820px) {
+    .er-body { grid-template-columns: 1fr; }
+    .er-quote { padding: 48px 24px 16px; }
+    .er-likes { padding: 12px 24px 28px; }
+    .er-seal { top: -16px; right: 16px; width: 90px; height: 90px; }
+    .er-seal span { font-size: 0.78rem; }
+    .er-top { padding: 18px 20px; }
+    .er-foot { padding: 18px 20px 22px; }
+  }
+</style>
+
+<section id="editorial-review" aria-labelledby="er-title">
+  <div class="er-card">
+    <div class="er-top">
+      <div class="er-source">
+        <span class="er-cnet-badge" aria-hidden="true">CNET</span>
+        <div class="er-source-meta">
+          <span id="er-title">CNET Download Editors’ Review</span>
+          <small>By Download.com staff • October 20, 2026</small>
         </div>
       </div>
+      <div class="er-rating" aria-label="Official Editorial Review on CNET Download">
+        <span class="er-stars" aria-hidden="true">★★★★★</span>
+        <span class="er-label">Editorial Review</span>
+      </div>
+    </div>
 
-      <div class="cnet-quote-box">
-        <blockquote>
-          “WhatsClean is a pragmatic option for Android users who need targeted removal of messaging media while keeping processing local to the device... On-device processing preserves privacy with no external uploads.”
-        </blockquote>
+    <div class="er-seal" aria-hidden="true">
+      <i class="material-icons">verified</i>
+      <span>Recommended</span>
+      <small>By Editors</small>
+    </div>
+
+    <div class="er-body">
+      <div class="er-quote">
+        <caption>
+          <blockquote>
+            “WhatsClean is a pragmatic option for Android users who need targeted removal of messaging media while keeping processing local to the device.”
+          </blockquote>
+        </caption>
+        <p class="er-cite"><b>Download.com staff</b>, CNET Download (Bottom Line)</p>
       </div>
 
-      <div class="cnet-highlights">
-        <div class="cnet-pill">
-          <i class="material-icons">lock</i> 100% Offline & Private
+      <div class="er-likes">
+        <h3>What the editors liked</h3>
+        <div class="er-like">
+          <i class="material-icons" aria-hidden="true">lock</i>
+          <span>On-device processing preserves privacy, no external uploads</span>
         </div>
-        <div class="cnet-pill">
-          <i class="material-icons">tune</i> Granular Control
+        <div class="er-like">
+          <i class="material-icons" aria-hidden="true">event</i>
+          <span>Granular chronological controls let users prune older media precisely</span>
         </div>
-        <div class="cnet-pill">
-          <i class="material-icons">speed</i> Lightweight Footprint
+        <div class="er-like">
+          <i class="material-icons" aria-hidden="true">content_copy</i>
+          <span>Duplicate detection and image grouping reduce redundant files</span>
         </div>
-      </div>
-
-      <div class="cnet-action-bar">
-        <a href="https://download.cnet.com/whatsclean-whatsapp-cleaner/3000-android-whatsclean-whatsapp-cleaner-1.html" target="_blank" rel="noopener noreferrer" class="cnet-btn">
-          Read Full CNET Review <i class="material-icons">open_in_new</i>
-        </a>
-        <div class="cnet-verified">
-          <i class="material-icons" style="color: #2e7d32; font-size: 18px;">check_circle</i> Verified Independent Editorial Review
+        <div class="er-like">
+          <i class="material-icons" aria-hidden="true">speed</i>
+          <span>Lightweight footprint, no intrusive background processes reported</span>
         </div>
       </div>
     </div>
-  </section>
 
+    <div class="er-foot">
+      <a class="er-btn" href="https://download.cnet.com/whatsclean-whatsapp-cleaner/3000-android-whatsclean-whatsapp-cleaner-1.html" target="_blank" rel="noopener noreferrer">
+        Read Full Review on CNET Download <i class="material-icons" aria-hidden="true">open_in_new</i>
+      </a>
+      <p class="er-note">
+        Review published on CNET Download (Download.com), a Ziff Davis company, written independently by staff editors. WhatsClean is developed by SAFEHEARTS and is not affiliated with or endorsed by WhatsApp or Meta.
+      </p>
+    </div>
+  </div>
+</section>
   <!-- CORPORATE PROFILE STATEMENTS -->
   <section>
     <div class="statement-grid">
