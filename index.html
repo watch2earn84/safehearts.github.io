@@ -10,7 +10,9 @@
   <link rel="icon" href="/logo.png">
 
   <!-- Premium Typography & Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Naskh+Arabic:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&family=Noto+Naskh+Arabic:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <style>
@@ -196,139 +198,282 @@
       font-size: 1.05rem;
     }
 
-    /* CNET FEATURED REVIEW CARD */
-    .cnet-review-card {
-      background: #ffffff;
+    /* VIDEO SHOWCASE SECTION */
+    .video-card-wrapper {
+      max-width: 360px;
+      margin: 0 auto;
       border-radius: 20px;
-      padding: 40px;
-      box-shadow: 0 10px 30px rgba(0, 74, 173, 0.08);
-      border: 1px solid rgba(0, 74, 173, 0.12);
-      position: relative;
       overflow: hidden;
+      background: #ffffff;
+      box-shadow: 0 12px 35px rgba(0, 74, 173, 0.12);
+      border: 1px solid rgba(0, 74, 173, 0.1);
+      transition: var(--transition);
     }
-    .cnet-review-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 6px;
-      height: 100%;
-      background: linear-gradient(180deg, #d32f2f, #ff5252);
+    .video-card-wrapper:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 45px rgba(0, 74, 173, 0.18);
     }
-    .cnet-header {
+    .video-card-wrapper video {
+      width: 100%;
+      display: block;
+      outline: none;
+    }
+
+    /* CNET DOWNLOAD EDITORS' REVIEW SECTION */
+    #editorial-review {
+      --er-primary: #004aad;
+      --er-secondary: #00a3ff;
+      --er-dark: #0f172a;
+      --er-cnet-red: #d32f2f;
+      --er-sun: #ffc93c;
+      --er-paper: #ffffff;
+      
+      padding: 80px 24px;
+      background: 
+        radial-gradient(900px 400px at 85% -10%, rgba(0, 163, 255, 0.12), transparent 60%),
+        radial-gradient(700px 360px at 0% 110%, rgba(0, 74, 173, 0.08), transparent 60%),
+        #f0f6ff;
+      font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+      color: var(--text-main);
+      box-sizing: border-box;
+    }
+    
+    .er-card {
+      position: relative;
+      max-width: 980px;
+      margin: 0 auto;
+      background: var(--er-paper);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 74, 173, 0.08), 0 0 0 1px rgba(0, 74, 173, 0.08);
+    }
+
+    .er-top {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
       flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
       gap: 16px;
-      margin-bottom: 24px;
-      border-bottom: 1px solid #f0f4f8;
-      padding-bottom: 20px;
+      padding: 20px 32px;
+      background: linear-gradient(135deg, var(--er-primary), #002f75);
+      color: #ffffff;
     }
-    .cnet-brand {
+
+    .er-source {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
     }
-    .cnet-logo-badge {
-      background: #d32f2f;
+
+    .er-cnet-badge {
+      background: var(--er-cnet-red);
       color: #ffffff;
       font-weight: 900;
-      font-size: 1.25rem;
-      padding: 6px 14px;
+      font-size: 1.1rem;
+      padding: 4px 10px;
       border-radius: 6px;
-      letter-spacing: 1px;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     }
-    .cnet-meta {
+
+    .er-source-meta {
       display: flex;
       flex-direction: column;
     }
-    .cnet-meta .source-name {
+
+    .er-source-meta span {
       font-weight: 700;
-      color: var(--dark);
-      font-size: 1.1rem;
+      font-size: 1.05rem;
+      line-height: 1.2;
     }
-    .cnet-meta .audience-tag {
+
+    .er-source-meta small {
+      font-weight: 400;
+      font-size: 0.8rem;
+      opacity: 0.85;
+      margin-top: 2px;
+    }
+
+    .er-rating {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+    }
+
+    .er-stars {
+      color: var(--er-sun);
+      font-size: 1.25rem;
+      letter-spacing: 2px;
+      line-height: 1;
+    }
+
+    .er-rating span.er-label {
       font-size: 0.85rem;
-      color: var(--text-muted);
+      opacity: 0.9;
+      font-weight: 500;
     }
-    .cnet-verdict-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: #e8f5e9;
-      color: #2e7d32;
-      font-weight: 700;
-      font-size: 0.9rem;
-      padding: 6px 16px;
-      border-radius: 20px;
-      border: 1px solid #c8e6c9;
-    }
-    .cnet-quote-box {
-      background: #f8fafc;
-      border-left: 4px solid var(--secondary);
-      padding: 24px;
-      border-radius: 8px;
-      margin-bottom: 24px;
-    }
-    .cnet-quote-box blockquote {
-      font-size: 1.1rem;
-      color: #1e293b;
-      font-style: italic;
-      line-height: 1.7;
-    }
-    .cnet-highlights {
+
+    .er-body {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-bottom: 28px;
+      grid-template-columns: 1.25fr 1fr;
+      gap: 0;
+      position: relative;
     }
-    .cnet-pill {
-      background: #f0f6ff;
-      padding: 12px 16px;
-      border-radius: 10px;
-      font-size: 0.9rem;
+
+    .er-quote {
+      position: relative;
+      padding: 44px 36px 40px 40px;
+    }
+
+    .er-quote::before {
+      content: "\201C";
+      position: absolute;
+      top: -10px;
+      left: 20px;
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 700;
+      font-size: 8.5rem;
+      line-height: 1;
+      color: rgba(0, 74, 173, 0.08);
+      pointer-events: none;
+    }
+
+    .er-quote blockquote {
+      position: relative;
+      margin: 0;
+      font-family: 'Fraunces', Georgia, serif;
       font-weight: 600;
-      color: var(--primary);
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      font-size: clamp(1.25rem, 2.4vw, 1.65rem);
+      line-height: 1.4;
+      color: var(--er-dark);
     }
-    .cnet-pill i {
+
+    .er-cite {
+      position: relative;
+      margin-top: 18px;
+      font-size: 0.9rem;
+      color: #64748b;
+    }
+
+    .er-cite b {
+      color: var(--er-primary);
+    }
+
+    .er-seal {
+      position: absolute;
+      top: -24px;
+      right: 28px;
+      width: 108px;
+      height: 108px;
+      border-radius: 50%;
+      background: var(--er-sun);
+      color: var(--er-dark);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      transform: rotate(8deg);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), inset 0 0 0 4px rgba(255, 255, 255, 0.6), inset 0 0 0 6px var(--er-dark);
+      font-weight: 700;
+      line-height: 1.1;
+      z-index: 2;
+    }
+
+    .er-seal .material-icons {
+      font-size: 26px;
+      color: var(--er-dark);
+    }
+
+    .er-seal span {
+      font-size: 0.9rem;
+      margin-top: 1px;
+    }
+
+    .er-seal small {
+      font-size: 0.6rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 2px;
+    }
+
+    .er-likes {
+      padding: 40px 32px 36px 16px;
+      display: grid;
+      gap: 12px;
+      align-content: center;
+    }
+
+    .er-likes h3 {
+      margin: 0 0 4px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--er-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .er-like {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      font-size: 0.9rem;
+      line-height: 1.4;
+      color: #334155;
+    }
+
+    .er-like .material-icons {
+      flex: none;
+      color: #ffffff;
+      background: var(--er-secondary);
+      border-radius: 8px;
+      padding: 4px;
       font-size: 18px;
-      color: var(--secondary);
     }
-    .cnet-action-bar {
+
+    .er-foot {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
       flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
       gap: 16px;
+      padding: 20px 32px 24px;
+      border-top: 1px dashed #e2e8f0;
+      background: #fafcff;
     }
-    .cnet-btn {
+
+    .er-btn {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: #d32f2f;
-      color: #ffffff;
       padding: 12px 24px;
-      border-radius: 10px;
-      font-weight: 600;
+      border-radius: 30px;
+      background: var(--er-primary);
+      color: #ffffff;
       text-decoration: none;
+      font-weight: 600;
+      font-size: 0.92rem;
       transition: var(--transition);
-      box-shadow: 0 4px 14px rgba(211, 47, 47, 0.25);
+      box-shadow: 0 4px 12px rgba(0, 74, 173, 0.2);
     }
-    .cnet-btn:hover {
-      background: #b71c1c;
+
+    .er-btn:hover {
+      background: var(--er-secondary);
       transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(211, 47, 47, 0.35);
+      box-shadow: 0 6px 16px rgba(0, 163, 255, 0.3);
     }
-    .cnet-verified {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      display: flex;
-      align-items: center;
-      gap: 6px;
+
+    .er-note {
+      max-width: 440px;
+      font-size: 0.78rem;
+      line-height: 1.5;
+      color: #64748b;
     }
 
     /* CORPORATE INTRO & STATEMENT PANELS */
@@ -484,24 +629,15 @@
       transform: scale(1.03);
     }
     .team-avatar {
-  width: 84px;
-  height: 84px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center 20%; /* Keeps focus slightly lower to preserve headroom */
-  display: block;
-  margin: 0 auto 14px;
-  border: 3px solid var(--primary);
-  box-shadow: 0 4px 10px rgba(0,74,173,0.1);
-}
-    .avatar-text {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: #fff;
-      font-weight: 700;
-      font-size: 1.5rem;
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 20%;
+      display: block;
+      margin: 0 auto 14px;
+      border: 3px solid var(--primary);
+      box-shadow: 0 4px 10px rgba(0,74,173,0.1);
     }
     .member h4 {
       font-size: 1.05rem;
@@ -569,7 +705,15 @@
       .core-values { grid-template-columns: repeat(2, 1fr); }
       .team-grid { grid-template-columns: repeat(3, 1fr); }
       .member.featured { transform: none; }
-      .cnet-highlights { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 820px) {
+      .er-body { grid-template-columns: 1fr; }
+      .er-quote { padding: 48px 24px 16px; }
+      .er-likes { padding: 12px 24px 28px; }
+      .er-seal { top: -16px; right: 16px; width: 90px; height: 90px; }
+      .er-seal span { font-size: 0.78rem; }
+      .er-top { padding: 18px 20px; }
+      .er-foot { padding: 18px 20px 22px; }
     }
     @media (max-width: 768px) {
       header h1 { font-size: 2.3rem; }
@@ -581,8 +725,6 @@
       .nav-app-badge .app-btn { padding: 4px 10px; font-size: 0.82rem; }
       .nav-app-badge .rating-info { font-size: 0.8rem; padding-left: 6px; }
       section { margin: 60px auto; }
-      .cnet-review-card { padding: 24px; }
-      .cnet-action-bar { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
@@ -622,351 +764,83 @@
     <p>We build privacy-first apps that protect users, strengthen connections, and solve real-world problems.</p>
   </header>
 
- <!-- Optional fonts for enhanced editorial typography -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<!-- CNET DOWNLOAD EDITORS' REVIEW SECTION -->
-<style>
-  #editorial-review {
-    --er-primary: #004aad;
-    --er-secondary: #00a3ff;
-    --er-dark: #0f172a;
-    --er-cnet-red: #d32f2f;
-    --er-sun: #ffc93c;
-    --er-paper: #ffffff;
-    --er-bg-tint: rgba(0, 74, 173, 0.04);
+  <!-- WHATSCLEAN VIDEO PREVIEW SECTION -->
+  <section>
+    <h2 class="section-title">See WhatsClean in Action</h2>
+    <p class="section-subtitle">Discover how WhatsClean helps you manage media, recover storage, and protect user privacy.</p>
     
-    padding: 80px 24px;
-    background: 
-      radial-gradient(900px 400px at 85% -10%, rgba(0, 163, 255, 0.12), transparent 60%),
-      radial-gradient(700px 360px at 0% 110%, rgba(0, 74, 173, 0.08), transparent 60%),
-      #f0f6ff;
-    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
-    color: var(--text-main, #374151);
-    box-sizing: border-box;
-  }
-  
-  #editorial-review * { box-sizing: border-box; }
+    <div class="video-card-wrapper">
+      <!-- ?v=2 forces browsers to load the newly uploaded video file -->
+      <video controls autoplay muted loop playsinline poster="/logo.png">
+        <source src="WhatsClean WhatsApp Cleaner.mp4?v=2" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
 
-  .er-card {
-    position: relative;
-    max-width: 980px;
-    margin: 0 auto;
-    background: var(--er-paper);
-    border-radius: 24px;
-    overflow: hidden;
-    box-shadow: 0 20px 50px rgba(0, 74, 173, 0.08), 0 0 0 1px rgba(0, 74, 173, 0.08);
-  }
-
-  .er-top {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    padding: 20px 32px;
-    background: linear-gradient(135deg, var(--er-primary), #002f75);
-    color: #ffffff;
-  }
-
-  .er-source {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .er-cnet-badge {
-    background: var(--er-cnet-red);
-    color: #ffffff;
-    font-weight: 900;
-    font-size: 1.1rem;
-    padding: 4px 10px;
-    border-radius: 6px;
-    letter-spacing: 0.5px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  }
-
-  .er-source-meta {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .er-source-meta span {
-    font-weight: 700;
-    font-size: 1.05rem;
-    line-height: 1.2;
-  }
-
-  .er-source-meta small {
-    font-weight: 400;
-    font-size: 0.8rem;
-    opacity: 0.85;
-    margin-top: 2px;
-  }
-
-  .er-rating {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-weight: 700;
-  }
-
-  .er-stars {
-    color: var(--er-sun);
-    font-size: 1.25rem;
-    letter-spacing: 2px;
-    line-height: 1;
-  }
-
-  .er-rating span.er-label {
-    font-size: 0.85rem;
-    opacity: 0.9;
-    font-weight: 500;
-  }
-
-  .er-body {
-    display: grid;
-    grid-template-columns: 1.25fr 1fr;
-    gap: 0;
-    position: relative;
-  }
-
-  .er-quote {
-    position: relative;
-    padding: 44px 36px 40px 40px;
-  }
-
-  .er-quote::before {
-    content: "\201C";
-    position: absolute;
-    top: -10px;
-    left: 20px;
-    font-family: 'Fraunces', Georgia, serif;
-    font-weight: 700;
-    font-size: 8.5rem;
-    line-height: 1;
-    color: rgba(0, 74, 173, 0.08);
-    pointer-events: none;
-  }
-
-  .er-quote blockquote {
-    position: relative;
-    margin: 0;
-    font-family: 'Fraunces', Georgia, serif;
-    font-weight: 600;
-    font-size: clamp(1.25rem, 2.4vw, 1.65rem);
-    line-height: 1.4;
-    color: var(--er-dark);
-  }
-
-  .er-cite {
-    position: relative;
-    margin-top: 18px;
-    font-size: 0.9rem;
-    color: #64748b;
-  }
-
-  .er-cite b {
-    color: var(--er-primary);
-  }
-
-  .er-seal {
-    position: absolute;
-    top: -24px;
-    right: 28px;
-    width: 108px;
-    height: 108px;
-    border-radius: 50%;
-    background: var(--er-sun);
-    color: var(--er-dark);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    transform: rotate(8deg);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), inset 0 0 0 4px rgba(255, 255, 255, 0.6), inset 0 0 0 6px var(--er-dark);
-    font-weight: 700;
-    line-height: 1.1;
-    z-index: 2;
-  }
-
-  .er-seal .material-icons {
-    font-size: 26px;
-    color: var(--er-dark);
-  }
-
-  .er-seal span {
-    font-size: 0.9rem;
-    margin-top: 1px;
-  }
-
-  .er-seal small {
-    font-size: 0.6rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-top: 2px;
-  }
-
-  .er-likes {
-    padding: 40px 32px 36px 16px;
-    display: grid;
-    gap: 12px;
-    align-content: center;
-  }
-
-  .er-likes h3 {
-    margin: 0 0 4px;
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: var(--er-primary);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-
-  .er-like {
-    display: flex;
-    gap: 12px;
-    align-items: flex-start;
-    padding: 12px 14px;
-    border-radius: 14px;
-    background: #f8fafc;
-    border: 1px solid #e2e8f0;
-    font-size: 0.9rem;
-    line-height: 1.4;
-    color: #334155;
-  }
-
-  .er-like .material-icons {
-    flex: none;
-    color: #ffffff;
-    background: var(--er-secondary);
-    border-radius: 8px;
-    padding: 4px;
-    font-size: 18px;
-  }
-
-  .er-foot {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    padding: 20px 32px 24px;
-    border-top: 1px dashed #e2e8f0;
-    background: #fafcff;
-  }
-
-  .er-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 12px 24px;
-    border-radius: 30px;
-    background: var(--er-primary);
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.92rem;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 12px rgba(0, 74, 173, 0.2);
-  }
-
-  .er-btn:hover {
-    background: var(--er-secondary);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 163, 255, 0.3);
-  }
-
-  .er-btn:focus-visible {
-    outline: 3px solid var(--er-sun);
-    outline-offset: 3px;
-  }
-
-  .er-note {
-    max-width: 440px;
-    font-size: 0.78rem;
-    line-height: 1.5;
-    color: #64748b;
-  }
-
-  @media (max-width: 820px) {
-    .er-body { grid-template-columns: 1fr; }
-    .er-quote { padding: 48px 24px 16px; }
-    .er-likes { padding: 12px 24px 28px; }
-    .er-seal { top: -16px; right: 16px; width: 90px; height: 90px; }
-    .er-seal span { font-size: 0.78rem; }
-    .er-top { padding: 18px 20px; }
-    .er-foot { padding: 18px 20px 22px; }
-  }
-</style>
-
-<section id="editorial-review" aria-labelledby="er-title">
-  <div class="er-card">
-    <div class="er-top">
-      <div class="er-source">
-        <span class="er-cnet-badge" aria-hidden="true">CNET</span>
-        <div class="er-source-meta">
-          <span id="er-title">CNET Download Editors’ Review</span>
-          <small>By Download.com staff • October 20, 2026</small>
+  <!-- CNET DOWNLOAD EDITORS' REVIEW SECTION -->
+  <section id="editorial-review" aria-labelledby="er-title">
+    <div class="er-card">
+      <div class="er-top">
+        <div class="er-source">
+          <span class="er-cnet-badge" aria-hidden="true">CNET</span>
+          <div class="er-source-meta">
+            <span id="er-title">CNET Download Editors’ Review</span>
+            <small>By Download.com staff • October 20, 2026</small>
+          </div>
+        </div>
+        <div class="er-rating" aria-label="Official Editorial Review on CNET Download">
+          <span class="er-stars" aria-hidden="true">★★★★★</span>
+          <span class="er-label">Editorial Review</span>
         </div>
       </div>
-      <div class="er-rating" aria-label="Official Editorial Review on CNET Download">
-        <span class="er-stars" aria-hidden="true">★★★★★</span>
-        <span class="er-label">Editorial Review</span>
+
+      <div class="er-seal" aria-hidden="true">
+        <i class="material-icons">verified</i>
+        <span>Recommended</span>
+        <small>By Editors</small>
       </div>
-    </div>
 
-    <div class="er-seal" aria-hidden="true">
-      <i class="material-icons">verified</i>
-      <span>Recommended</span>
-      <small>By Editors</small>
-    </div>
-
-    <div class="er-body">
-      <div class="er-quote">
-        <caption>
+      <div class="er-body">
+        <div class="er-quote">
           <blockquote>
             “WhatsClean is a pragmatic option for Android users who need targeted removal of messaging media while keeping processing local to the device.”
           </blockquote>
-        </caption>
-        <p class="er-cite"><b>Download.com staff</b>, CNET Download (Bottom Line)</p>
+          <p class="er-cite"><b>Download.com staff</b>, CNET Download (Bottom Line)</p>
+        </div>
+
+        <div class="er-likes">
+          <h3>What the editors liked</h3>
+          <div class="er-like">
+            <i class="material-icons" aria-hidden="true">lock</i>
+            <span>On-device processing preserves privacy, no external uploads</span>
+          </div>
+          <div class="er-like">
+            <i class="material-icons" aria-hidden="true">event</i>
+            <span>Granular chronological controls let users prune older media precisely</span>
+          </div>
+          <div class="er-like">
+            <i class="material-icons" aria-hidden="true">content_copy</i>
+            <span>Duplicate detection and image grouping reduce redundant files</span>
+          </div>
+          <div class="er-like">
+            <i class="material-icons" aria-hidden="true">speed</i>
+            <span>Lightweight footprint, no intrusive background processes reported</span>
+          </div>
+        </div>
       </div>
 
-      <div class="er-likes">
-        <h3>What the editors liked</h3>
-        <div class="er-like">
-          <i class="material-icons" aria-hidden="true">lock</i>
-          <span>On-device processing preserves privacy, no external uploads</span>
-        </div>
-        <div class="er-like">
-          <i class="material-icons" aria-hidden="true">event</i>
-          <span>Granular chronological controls let users prune older media precisely</span>
-        </div>
-        <div class="er-like">
-          <i class="material-icons" aria-hidden="true">content_copy</i>
-          <span>Duplicate detection and image grouping reduce redundant files</span>
-        </div>
-        <div class="er-like">
-          <i class="material-icons" aria-hidden="true">speed</i>
-          <span>Lightweight footprint, no intrusive background processes reported</span>
-        </div>
+      <div class="er-foot">
+        <a class="er-btn" href="https://download.cnet.com/whatsclean-whatsapp-cleaner/3000-android-whatsclean-whatsapp-cleaner-1.html" target="_blank" rel="noopener noreferrer">
+          Read Full Review on CNET Download <i class="material-icons" aria-hidden="true">open_in_new</i>
+        </a>
+        <p class="er-note">
+          Review published on CNET Download (Download.com), a Ziff Davis company, written independently by staff editors. WhatsClean is developed by SAFEHEARTS and is not affiliated with or endorsed by WhatsApp or Meta.
+        </p>
       </div>
     </div>
+  </section>
 
-    <div class="er-foot">
-      <a class="er-btn" href="https://download.cnet.com/whatsclean-whatsapp-cleaner/3000-android-whatsclean-whatsapp-cleaner-1.html" target="_blank" rel="noopener noreferrer">
-        Read Full Review on CNET Download <i class="material-icons" aria-hidden="true">open_in_new</i>
-      </a>
-      <p class="er-note">
-        Review published on CNET Download (Download.com), a Ziff Davis company, written independently by staff editors. WhatsClean is developed by SAFEHEARTS and is not affiliated with or endorsed by WhatsApp or Meta.
-      </p>
-    </div>
-  </div>
-</section>
   <!-- CORPORATE PROFILE STATEMENTS -->
   <section>
     <div class="statement-grid">
@@ -1100,37 +974,38 @@
         <p>Technical Associate</p>
       </div>
       <div class="member">
-  <img src="/maaz.png" alt="Maaz Azam" class="team-avatar" style="object-position: center 60%;">
-  <h4>Maaz Azam</h4>
-  <p>Technical Associate</p>
+        <img src="/maaz.png" alt="Maaz Azam" class="team-avatar" style="object-position: center 60%;">
+        <h4>Maaz Azam</h4>
+        <p>Technical Associate</p>
+      </div>
     </div>
   </section>
 
   <!-- DIRECT CONTACT ANCHOR -->
   <section id="contact">
     <h2 class="section-title">Contact Us</h2>
-    <p class="section-subtitle">Reach out for enterprise partnerships, system deployment questions, or engineering support.</p>
+    <p class="section-subtitle">Reach out for enterprise partnerships, system deployment, or general support.</p>
     
     <div class="contact-card">
       <div class="contact-info">
         <div class="contact-item">
           <i class="material-icons">email</i>
-          <span>safehearts.apps@gmail.com</span>
+          <span>support@safehearts.it.com</span>
         </div>
         <div class="contact-item">
-          <i class="material-icons">language</i>
-          <span>safehearts.it.com</span>
+          <i class="material-icons">location_on</i>
+          <span>SAFEHEARTS (SMP-PRIVATE) LIMITED</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- STANDARD COMPLIANCE FOOTER -->
+  <!-- FOOTER -->
   <footer>
-    <p>© 2026 SafeHearts Private Limited – All Rights Reserved</p>
+    <p>&copy; 2026 SAFEHEARTS(SMP-PRIVATE) LIMITED. All rights reserved.</p>
     <p>
       <a href="/">Home</a> | 
-      <a href="/whatsclean/">WhatsClean App</a> | 
+      <a href="/whatsclean/">WhatsClean</a> | 
       <a href="/privacy.html">Privacy Policy</a>
     </p>
   </footer>
