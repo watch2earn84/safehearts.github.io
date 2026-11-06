@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - SafeMedia cleaner for WA</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+        h1, h2 {
+            color: #1a73e8;
+        }
+        .trader-card {
+            background-color: #f8f9fa;
+            border-left: 4px solid #1a73e8;
+            padding: 16px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        .trader-card ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .trader-card li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Terms of Service</h1>
+    <p><strong>Last Updated:</strong> November 6, 2026</p>
+
+    <div class="trader-card">
+        <h2>Trader Information</h2>
+        <p>In compliance with commercial transparency regulations and EU Digital Services Act (DSA) requirements, this app is operated by:</p>
+        <ul>
+            <li><strong>Developer / Business Name:</strong> SafeHearts Limited</li>
+            <li><strong>Contact Email:</strong> [INSERT PUBLIC SUPPORT EMAIL]</li>
+            <li><strong>Phone Number:</strong> [INSERT CONTACT PHONE NUMBER]</li>
+            <li><strong>Physical Address:</strong> [INSERT PHYSICAL MAILING ADDRESS]</li>
+        </ul>
+    </div>
+
+    <h2>1. Acceptance of Terms</h2>
+    <p>By downloading, installing, or using <strong>SafeMedia cleaner for WA</strong> ("Service"), you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the application.</p>
+
+    <h2>2. App Functionality & Data Handling</h2>
+    <p>SafeMedia cleaner for WA provides local storage cleanup and media management utilities. All scanning, sorting, and cleaning actions take place directly on your device. You are responsible for reviewing and confirming any file deletions performed through the app.</p>
+
+    <h2>3. User Responsibilities</h2>
+    <p>You agree to use SafeMedia cleaner for WA only for lawful purposes. You shall not attempt to reverse engineer, decompile, or tamper with the application code or security features.</p>
+
+    <h2>4. Intellectual Property</h2>
+    <p>All trademarks, code, logos, and intellectual property associated with <strong>SafeMedia cleaner for WA</strong> are the exclusive property of <strong>SafeHearts Limited</strong>. WhatsApp is a registered trademark of Meta Platforms, Inc. This application is an independent utility and is not affiliated with, authorized, or endorsed by Meta Platforms, Inc.</p>
+
+    <h2>5. Disclaimer of Warranties & Limitation of Liability</h2>
+    <p>The Service is provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind. SafeHearts Limited shall not be held liable for any indirect, incidental, or loss-of-data damages resulting from your use of or inability to use the application.</p>
+
+    <h2>6. Changes to Terms</h2>
+    <p>We reserve the right to update these Terms of Service at any time. Any updates will be published directly on this web page with a revised effective date.</p>
+
+    <h2>7. Contact Information</h2>
+    <p>If you have questions regarding these Terms, please contact us at: <a href="mailto:[INSERT PUBLIC SUPPORT EMAIL]">[INSERT PUBLIC SUPPORT EMAIL]</a></p>
+
+</body>
+</html>
